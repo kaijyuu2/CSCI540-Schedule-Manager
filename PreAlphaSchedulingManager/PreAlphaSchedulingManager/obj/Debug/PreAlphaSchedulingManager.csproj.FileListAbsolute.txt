@@ -1,0 +1,4 @@
+C:\Users\webintern2\Documents\Visual Studio 2013\Projects\PreAlphaSchedulingManager\PreAlphaSchedulingManager\bin\Debug\PreAlphaSchedulingManager.exe.config
+C:\Users\webintern2\Desktop\PreAlphaSchedulingManager\PreAlphaSchedulingManager\bin\Debug\PreAlphaSchedulingManager.exe.config
+C:\Users\bmcswain\Desktop\PreAlphaSchedulingManager\PreAlphaSchedulingManager\bin\Debug\PreAlphaSchedulingManager.exe.config
+C:\Users\bnmcs_000\Desktop\PreAlphaSchedulingManager\PreAlphaSchedulingManager\bin\Debug\PreAlphaSchedulingManager.exe.config
