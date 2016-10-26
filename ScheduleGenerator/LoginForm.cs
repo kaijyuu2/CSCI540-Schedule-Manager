@@ -32,42 +32,34 @@ namespace ScheduleGenerator
                 SqlConnection con = new SqlConnection(serverInfo);
                 con.Open();
                 string userID = UsernameTextBox.Text;
-
                 int userIDint = Convert.ToInt32(userID);
-
                 string password = PasswordMaskedTextBox.Text;
 
-                SqlCommand cmd = new SqlCommand("select Email,Password from Employee where Email='" + email + "'and Password='" + password + "'", con);
-               // SqlCommand cmd = new SqlCommand("getPassword", con);
-               // cmd.CommandType = CommandType.StoredProcedure;
-               // cmd.Parameters.Add(new SqlParameter("@pID", email));
+                // SqlCommand cmd = new SqlCommand("getPassword", con);
+                // cmd.CommandType = CommandType.StoredProcedure;
+                // cmd.Parameters.Add(new SqlParameter("@pID", email));
 
-
+                SqlCommand cmd = new SqlCommand("select EmployeeID,Password from Employee where EmployeeID='" + userID + "'and Password='" + password + "'", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
-                    SqlCommand adminCheck = new SqlCommand("select * from Employee where Email='" + email + "'and Admin='True'", con);
+                    SqlCommand adminCheck = new SqlCommand("select * from Employee where EmployeeID='" + userID + "'and Admin='True'", con);
                     //You might need to check the procedure as I'm not sure what you called the Admin column so it could cause errors.
-                  //  SqlCommand getID = new SqlCommand("getID", con);
-                   // getID.CommandType = CommandType.StoredProcedure;
-                  //  getID.Parameters.Add(new SqlParameter("@Pemail", email));
                     SqlDataAdapter idDataAdapter = new SqlDataAdapter(adminCheck);
 
-<<<<<<< HEAD
-                    SqlCommand adminCheck = new SqlCommand("getAdmin", con);
-                    adminCheck.Parameters.Add(new SqlParameter("@pID", userID));
-                    adminCheck.CommandType = CommandType.StoredProcedure;
-=======
-                    DataSet userDataSetID = new DataSet();
-                    idDataAdapter.Fill(userDataSetID, "EmployeeID");
+
+                   // SqlCommand adminCheck = new SqlCommand("getAdmin", con);
+                   // adminCheck.Parameters.Add(new SqlParameter("@pID", userID));
+                   // adminCheck.CommandType = CommandType.StoredProcedure;
+                     DataSet userDataSetID = new DataSet();
+                     idDataAdapter.Fill(userDataSetID, "EmployeeID");
                     //int userID = userDataSetID.
 
                   //  SqlCommand adminCheck = new SqlCommand("getAdmin", con);
                   //  adminCheck.CommandType = CommandType.StoredProcedure;
                   //  adminCheck.Parameters.Add(new SqlParameter("@pEmail", email));
->>>>>>> origin/master
                     SqlDataAdapter adminDA = new SqlDataAdapter(adminCheck);
                     DataTable adminDT = new DataTable();
 
@@ -81,11 +73,7 @@ namespace ScheduleGenerator
                     else
                     {
                         MessageBox.Show("Login successful");
-<<<<<<< HEAD
                         new UserForm(userIDint).Show();
-=======
-                        new UserForm(email).Show();
->>>>>>> origin/master
                         this.Hide();
                     }
                 }

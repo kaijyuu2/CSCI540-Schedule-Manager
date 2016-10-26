@@ -10,15 +10,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.OleDb;
-using System.Data.SqlClient;
-using System.Threading.Tasks;
 
 namespace ScheduleGenerator
 {
     public partial class AddUserForm : Form
     {
         SqlConnection con = new SqlConnection();
-        String serverInfo = "Data Source=MARK-PC\\MWSQLSERVER;Initial Catalog=SchedulingDatabase;Integrated Security=True";
+        //String serverInfo = "Data Source=MARK-PC\\MWSQLSERVER;Initial Catalog=SchedulingDatabase;Integrated Security=True";
+        String serverInfo = "Data Source=HEADQUARTERS\\SQLEXPRESS;Initial Catalog=SchedulingDatabase;Integrated Security=True";
 
         public AddUserForm()
         {

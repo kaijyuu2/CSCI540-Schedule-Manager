@@ -17,17 +17,14 @@ namespace ScheduleGenerator
     {
         SqlConnection con = new SqlConnection();
        // String serverInfo = "Data Source=MARK-PC\\MWSQLSERVER;Initial Catalog=SchedulingDatabase;Integrated Security=True";
-        String serverInfo = "Data Source=HEADQUARTERS\\SQLSERVEREXPRESS;Initial Catalog=SchedulingDatabase;Integrated Security=True";
+        String serverInfo = "Data Source=HEADQUARTERS\\SQLEXPRESS;Initial Catalog=SchedulingDatabase;Integrated Security=True";
         private int currentUserId;
 
         //Must have a way to keep track of which user is using the form.
-<<<<<<< HEAD
+
         public UserForm(int id)
-=======
-        public UserForm(String email)
->>>>>>> origin/master
         {
-            currentUserId = email;
+            currentUserId = id;
             InitializeComponent();
         }
 
@@ -38,97 +35,110 @@ namespace ScheduleGenerator
 
         private void AvailabilityButton_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-=======
+            try
+            {
+                SqlConnection con = new SqlConnection(serverInfo);
+                con.Open();
 
-           
->>>>>>> origin/master
-            SqlConnection con = new SqlConnection(serverInfo);
-            con.Open();
+                //Sunday
+                string fTime = fromSundayTextBox.ToString();
+                int fromTime = Convert.ToInt32(fTime);
+                string tTime = toSundayTextBox.ToString();
+                int toTime = Convert.ToInt32(tTime);
+                SqlCommand cmd = new SqlCommand("addAvailability", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@pNewEmployeeID", currentUserId));
+                //Day id is 0 for Sunday.
+                cmd.Parameters.Add(new SqlParameter("@pDayID", 0));
+                cmd.Parameters.Add(new SqlParameter("@pNewStartTime", fromTime));
+                cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
 
-            //Sunday
-            String fromTime = fromSundayTextBox.ToString();
-            String toTime = toSundayTextBox.ToString();
-            SqlCommand cmd = new SqlCommand("addAvailability", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@pNewEmployeeID", currentUserId));
-            //Day id is 0 for Sunday.
-            cmd.Parameters.Add(new SqlParameter("@pDayID", 0));
-            cmd.Parameters.Add(new SqlParameter("@pNewStartTime", fromTime));
-            cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
+                //Monday
+                fTime = fromMondayTextBox.ToString();
+                fromTime = Convert.ToInt32(fTime);
+                tTime = toMondayTextBox.ToString();
+                toTime = Convert.ToInt32(tTime);
+                cmd = new SqlCommand("addAvailability", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@pNewEmployeeID", currentUserId));
+                //Day id is 1 for Monday.
+                cmd.Parameters.Add(new SqlParameter("@pDayID", 1));
+                cmd.Parameters.Add(new SqlParameter("@pNewStartTime", fromTime));
+                cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
 
-            //Monday
-            fromTime = fromMondayTextBox.ToString();
-            toTime = toMondayTextBox.ToString();
-            cmd = new SqlCommand("addAvailability", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-<<<<<<< HEAD
-=======
+                //Tuesday
+                fTime = fromTuesdayTextBox.ToString();
+                fromTime = Convert.ToInt32(fTime);
+                tTime = toTuesdayTextBox.ToString();
+                toTime = Convert.ToInt32(tTime);
+                cmd = new SqlCommand("addAvailability", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@pNewEmployeeID", currentUserId));
+                //Day id is 2 for Tuesday.
+                cmd.Parameters.Add(new SqlParameter("@pDayID", 2));
+                cmd.Parameters.Add(new SqlParameter("@pNewStartTime", fromTime));
+                cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
 
->>>>>>> origin/master
-            cmd.Parameters.Add(new SqlParameter("@pNewEmployeeID", currentUserId));
-            //Day id is 1 for Monday.
-            cmd.Parameters.Add(new SqlParameter("@pDayID", 1));
-            cmd.Parameters.Add(new SqlParameter("@pNewStartTime", fromTime));
-            cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
+                //Wednesday
+                fTime = fromWednesdayTextBox.ToString();
+                fromTime = Convert.ToInt32(fTime);
+                tTime = toWednesdayTextBox.ToString();
+                toTime = Convert.ToInt32(tTime);
+                cmd = new SqlCommand("addAvailability", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@pNewEmployeeID", currentUserId));
+                //Day id is 3 for Wednesday.
+                cmd.Parameters.Add(new SqlParameter("@pDayID", 3));
+                cmd.Parameters.Add(new SqlParameter("@pNewStartTime", fromTime));
+                cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
 
-            //Tuesday
-            fromTime = fromTuesdayTextBox.ToString();
-            toTime = toTuesdayTextBox.ToString();
-            cmd = new SqlCommand("addAvailability", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@pNewEmployeeID", currentUserId));
-            //Day id is 2 for Tuesday.
-            cmd.Parameters.Add(new SqlParameter("@pDayID", 2));
-            cmd.Parameters.Add(new SqlParameter("@pNewStartTime", fromTime));
-            cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
+                //Thursday
+                fTime = fromThursdayTextBox.ToString();
+                fromTime = Convert.ToInt32(fTime);
+                tTime = toThursdayTextBox.ToString();
+                toTime = Convert.ToInt32(tTime);
+                cmd = new SqlCommand("addAvailability", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@pNewEmployeeID", currentUserId));
+                //Day id is 4 for Thursday.
+                cmd.Parameters.Add(new SqlParameter("@pDayID", 4));
+                cmd.Parameters.Add(new SqlParameter("@pNewStartTime", fromTime));
+                cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
 
-            //Wednesday
-            fromTime = fromWednesdayTextBox.ToString();
-            toTime = toWednesdayTextBox.ToString();
-            cmd = new SqlCommand("addAvailability", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@pNewEmployeeID", currentUserId));
-            //Day id is 3 for Wednesday.
-            cmd.Parameters.Add(new SqlParameter("@pDayID", 3));
-            cmd.Parameters.Add(new SqlParameter("@pNewStartTime", fromTime));
-            cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
+                //Friday
+                fTime = fromFridayTextBox.ToString();
+                fromTime = Convert.ToInt32(fTime);
+                tTime = toFridayTextBox.ToString();
+                toTime = Convert.ToInt32(tTime);
+                cmd = new SqlCommand("addAvailability", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@pNewEmployeeID", currentUserId));
+                //Day id is 5 for Friday.
+                cmd.Parameters.Add(new SqlParameter("@pDayID", 5));
+                cmd.Parameters.Add(new SqlParameter("@pNewStartTime", fromTime));
+                cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
 
-            //Thursday
-            fromTime = fromThursdayTextBox.ToString();
-            toTime = toThursdayTextBox.ToString();
-            cmd = new SqlCommand("addAvailability", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@pNewEmployeeID", currentUserId));
-            //Day id is 4 for Thursday.
-            cmd.Parameters.Add(new SqlParameter("@pDayID", 4));
-            cmd.Parameters.Add(new SqlParameter("@pNewStartTime", fromTime));
-            cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
+                //Saturday
+                fTime = fromSaturdayTextBox.ToString();
+                fromTime = Convert.ToInt32(fTime);
+                tTime = toSaturdayTextBox.ToString();
+                toTime = Convert.ToInt32(tTime);
+                cmd = new SqlCommand("addAvailability", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@pNewEmployeeID", currentUserId));
+                //Day id is 6 for Saturday.
+                cmd.Parameters.Add(new SqlParameter("@pDayID", 6));
+                cmd.Parameters.Add(new SqlParameter("@pNewStartTime", fromTime));
+                cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
 
-            //Friday
-            fromTime = fromFridayTextBox.ToString();
-            toTime = toFridayTextBox.ToString();
-            cmd = new SqlCommand("addAvailability", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@pNewEmployeeID", currentUserId));
-            //Day id is 5 for Friday.
-            cmd.Parameters.Add(new SqlParameter("@pDayID", 5));
-            cmd.Parameters.Add(new SqlParameter("@pNewStartTime", fromTime));
-            cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
+                MessageBox.Show("Changes have been pushed!");
 
-            //Saturday
-            fromTime = fromSaturdayTextBox.ToString();
-            toTime = toSaturdayTextBox.ToString();
-            cmd = new SqlCommand("addAvailability", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@pNewEmployeeID", currentUserId));
-            //Day id is 6 for Saturday.
-            cmd.Parameters.Add(new SqlParameter("@pDayID", 6));
-            cmd.Parameters.Add(new SqlParameter("@pNewStartTime", fromTime));
-            cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
-
-
-            con.Close();
+                con.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void askOffToolStripMenuItem_Click(object sender, EventArgs e)
