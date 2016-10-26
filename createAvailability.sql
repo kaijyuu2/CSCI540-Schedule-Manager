@@ -3,13 +3,12 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 -- =============================================
--- Author:		Mason Hardy
--- Create date: 10-16-16
+-- Author:		Mark and Daniel
+-- Create date: 10-26-16
 -- Description:	Create a new availability.
 -- =============================================
-CREATE PROCEDURE createAvailability
+CREATE PROCEDURE addAvailability
 	-- Add the parameters for the stored procedure here
-	@pID int = 0,
 	@pNewEmployeeID int = 0,
 	@pNewDayID int = 0,
 	@pNewStartTime int = 0,
@@ -22,7 +21,7 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	INSERT INTO Availability
-	VALUES(@pID, @pNewEmployeeID, @pNewDayID, @pNewStartTime, @pNewEndTime)
+	INSERT INTO Availability(EmployeeID, DayID, StartTIme, EndTime)
+	VALUES(@pNewEmployeeID, @pNewDayID, @pNewStartTime, @pNewEndTime)
 END
 GO

@@ -41,9 +41,9 @@ namespace ScheduleGenerator
                 con.Open();
 
                 //Sunday
-                string fTime = fromSundayTextBox.ToString();
+                string fTime = fromSundayTextBox.Text;
                 int fromTime = Convert.ToInt32(fTime);
-                string tTime = toSundayTextBox.ToString();
+                string tTime = toSundayTextBox.Text;
                 int toTime = Convert.ToInt32(tTime);
                 SqlCommand cmd = new SqlCommand("addAvailability", con);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -54,9 +54,9 @@ namespace ScheduleGenerator
                 cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
 
                 //Monday
-                fTime = fromMondayTextBox.ToString();
+                fTime = fromMondayTextBox.Text;
                 fromTime = Convert.ToInt32(fTime);
-                tTime = toMondayTextBox.ToString();
+                tTime = toMondayTextBox.Text;
                 toTime = Convert.ToInt32(tTime);
                 cmd = new SqlCommand("addAvailability", con);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -67,9 +67,9 @@ namespace ScheduleGenerator
                 cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
 
                 //Tuesday
-                fTime = fromTuesdayTextBox.ToString();
+                fTime = fromTuesdayTextBox.Text;
                 fromTime = Convert.ToInt32(fTime);
-                tTime = toTuesdayTextBox.ToString();
+                tTime = toTuesdayTextBox.Text;
                 toTime = Convert.ToInt32(tTime);
                 cmd = new SqlCommand("addAvailability", con);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -80,9 +80,9 @@ namespace ScheduleGenerator
                 cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
 
                 //Wednesday
-                fTime = fromWednesdayTextBox.ToString();
+                fTime = fromWednesdayTextBox.Text;
                 fromTime = Convert.ToInt32(fTime);
-                tTime = toWednesdayTextBox.ToString();
+                tTime = toWednesdayTextBox.Text;
                 toTime = Convert.ToInt32(tTime);
                 cmd = new SqlCommand("addAvailability", con);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -93,9 +93,9 @@ namespace ScheduleGenerator
                 cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
 
                 //Thursday
-                fTime = fromThursdayTextBox.ToString();
+                fTime = fromThursdayTextBox.Text;
                 fromTime = Convert.ToInt32(fTime);
-                tTime = toThursdayTextBox.ToString();
+                tTime = toThursdayTextBox.Text;
                 toTime = Convert.ToInt32(tTime);
                 cmd = new SqlCommand("addAvailability", con);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -106,9 +106,9 @@ namespace ScheduleGenerator
                 cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
 
                 //Friday
-                fTime = fromFridayTextBox.ToString();
+                fTime = fromFridayTextBox.Text;
                 fromTime = Convert.ToInt32(fTime);
-                tTime = toFridayTextBox.ToString();
+                tTime = toFridayTextBox.Text;
                 toTime = Convert.ToInt32(tTime);
                 cmd = new SqlCommand("addAvailability", con);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -119,9 +119,9 @@ namespace ScheduleGenerator
                 cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
 
                 //Saturday
-                fTime = fromSaturdayTextBox.ToString();
+                fTime = fromSaturdayTextBox.Text;
                 fromTime = Convert.ToInt32(fTime);
-                tTime = toSaturdayTextBox.ToString();
+                tTime = toSaturdayTextBox.Text;
                 toTime = Convert.ToInt32(tTime);
                 cmd = new SqlCommand("addAvailability", con);
                 cmd.CommandType = CommandType.StoredProcedure;
