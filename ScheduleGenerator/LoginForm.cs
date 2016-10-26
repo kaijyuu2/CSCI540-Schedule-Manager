@@ -37,9 +37,28 @@ namespace ScheduleGenerator
                 //      (e.g. "employee" stuff is blank maybe?) -- might need to put in some test ones
                 //      procedures all work fine but the DAYS, EMPLOYEES, etc are blank-ish but with the correct columns
 
-                string userID = UsernameTextBox.Text;
-
-                int userIDint = Convert.ToInt32(userID);
+                string userEmail = UsernameTextBox.Text;
+                Int32 userID;
+                SqlCommand getid = new SqlCommand();
+                SqlDataReader reader;
+                getid.CommandText = "getEmployeeIDFromEmail";
+                getid.CommandType = CommandType.StoredProcedure;
+                getid.Connection = con;
+                getid.Parameters.Add(new SqlParameter("@email", userEmail));
+                reader = getid.ExecuteReader();
+                if(reader.HasRows)
+                {
+                    while(reader.Read())
+                    {
+                        userID = reader.GetInt32(0);
+                        break;
+                    }
+                }
+                else
+                {
+                    userID = -1;
+                }
+                reader.Close();
 
                 string password = PasswordMaskedTextBox.Text;
 
