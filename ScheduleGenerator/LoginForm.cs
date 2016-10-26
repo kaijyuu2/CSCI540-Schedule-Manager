@@ -17,7 +17,7 @@ namespace ScheduleGenerator
     {
         SqlConnection con = new SqlConnection();
        // String serverInfo = "Data Source=MARK-PC\\MWSQLSERVER;Initial Catalog=SchedulingDatabase;Integrated Security=True";
-        String serverInfo = "Data Source=HEADQUARTERS\\SQLEXPRESS;Initial Catalog=SchedulingDatabase;Integrated Security=True";
+        String serverInfo = "Data Source=YOU\\SQLEXPRESS;Initial Catalog=SchedulingDatabase;Integrated Security=True";
 
         public Form1()
         {
@@ -55,19 +55,10 @@ namespace ScheduleGenerator
                   //  getID.Parameters.Add(new SqlParameter("@Pemail", email));
                     SqlDataAdapter idDataAdapter = new SqlDataAdapter(adminCheck);
 
-<<<<<<< HEAD
-                    SqlCommand adminCheck = new SqlCommand("getAdmin", con);
+
+                    //SqlCommand adminCheck = new SqlCommand("getAdmin", con);
                     adminCheck.Parameters.Add(new SqlParameter("@pID", userID));
                     adminCheck.CommandType = CommandType.StoredProcedure;
-=======
-                    DataSet userDataSetID = new DataSet();
-                    idDataAdapter.Fill(userDataSetID, "EmployeeID");
-                    //int userID = userDataSetID.
-
-                  //  SqlCommand adminCheck = new SqlCommand("getAdmin", con);
-                  //  adminCheck.CommandType = CommandType.StoredProcedure;
-                  //  adminCheck.Parameters.Add(new SqlParameter("@pEmail", email));
->>>>>>> origin/master
                     SqlDataAdapter adminDA = new SqlDataAdapter(adminCheck);
                     DataTable adminDT = new DataTable();
 
@@ -81,11 +72,8 @@ namespace ScheduleGenerator
                     else
                     {
                         MessageBox.Show("Login successful");
-<<<<<<< HEAD
                         new UserForm(userIDint).Show();
-=======
-                        new UserForm(email).Show();
->>>>>>> origin/master
+
                         this.Hide();
                     }
                 }
