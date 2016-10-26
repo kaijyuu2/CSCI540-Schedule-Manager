@@ -31,6 +31,12 @@ namespace ScheduleGenerator
             {
                 SqlConnection con = new SqlConnection(serverInfo);
                 con.Open();
+
+                //pull from database like "userID = DATABASECALL.GETID_FROM_STRING(UsernameTextBox.Text)"
+                //NOTE: appears that maybe not all database data on the lower levels is fully initialized
+                //      (e.g. "employee" stuff is blank maybe?) -- might need to put in some test ones
+                //      procedures all work fine but the DAYS, EMPLOYEES, etc are blank-ish but with the correct columns
+
                 string userID = UsernameTextBox.Text;
 
                 int userIDint = Convert.ToInt32(userID);
