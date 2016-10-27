@@ -98,3 +98,18 @@ C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\Sche
 C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.pdb
 C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.exe.manifest
 C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.application
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.csprojResolveAssemblyReference.cache
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.AddUserForm.resources
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.AdministratorForm.resources
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.EditUserForm.resources
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.TimeOffForm.resources
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.UserForm.resources
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.Form1.resources
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.Properties.Resources.resources
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.csproj.GenerateResource.Cache
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe.manifest
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.application
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.pdb
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.exe.manifest
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.application

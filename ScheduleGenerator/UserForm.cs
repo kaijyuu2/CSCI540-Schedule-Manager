@@ -15,14 +15,18 @@ namespace ScheduleGenerator
 {
     public partial class UserForm : Form
     {
-        SqlConnection con = new SqlConnection();
+
        // String serverInfo = "Data Source=MARK-PC\\MWSQLSERVER;Initial Catalog=SchedulingDatabase;Integrated Security=True";
         String serverInfo = "Data Source=HEADQUARTERS\\SQLEXPRESS;Initial Catalog=SchedulingDatabase;Integrated Security=True";
+
+        //String serverInfo = "Data Source=" + System.Environment.GetEnvironmentVariable("COMPUTERNAME") + "\\SQLEXPRESS;Initial Catalog=SchedulingDatabase;Integrated Security=True";
+
         private int currentUserId;
 
         //Must have a way to keep track of which user is using the form.
 
         public UserForm(int id)
+
         {
             currentUserId = id;
             InitializeComponent();
@@ -35,9 +39,11 @@ namespace ScheduleGenerator
 
         private void AvailabilityButton_Click(object sender, EventArgs e)
         {
+
             try
             {
                 SqlConnection con = new SqlConnection(serverInfo);
+                //SqlConnection con = new SqlConnection(serverInfo);
                 con.Open();
 
                 //Sunday
@@ -150,12 +156,12 @@ namespace ScheduleGenerator
 
                 MessageBox.Show("Changes have been pushed!");
 
-                con.Close();
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+
         }
 
         private void askOffToolStripMenuItem_Click(object sender, EventArgs e)
