@@ -31,6 +31,7 @@ namespace ScheduleGenerator
             {
                 SqlConnection con = new SqlConnection(serverInfo);
                 con.Open();
+                SqlDataReader reader;
 
                 //pull from database like "userID = DATABASECALL.GETID_FROM_STRING(UsernameTextBox.Text)"
                 //NOTE: appears that maybe not all database data on the lower levels is fully initialized
@@ -38,9 +39,8 @@ namespace ScheduleGenerator
                 //      procedures all work fine but the DAYS, EMPLOYEES, etc are blank-ish but with the correct columns
 
                 string userEmail = UsernameTextBox.Text;
-                Int32 userID;
+                Int32 userID = -1;
                 SqlCommand getid = new SqlCommand();
-                SqlDataReader reader;
                 getid.CommandText = "getEmployeeIDFromEmail";
                 getid.CommandType = CommandType.StoredProcedure;
                 getid.Connection = con;
@@ -61,19 +61,27 @@ namespace ScheduleGenerator
                 reader.Close();
 
                 string password = PasswordMaskedTextBox.Text;
+                string userPassword = "";
 
-                SqlCommand cmd = new SqlCommand("select Email,Password from Employee where Email='" + email + "'and Password='" + password + "'", con);
-               // SqlCommand cmd = new SqlCommand("getPassword", con);
-               // cmd.CommandType = CommandType.StoredProcedure;
-               // cmd.Parameters.Add(new SqlParameter("@pID", email));
-
-
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                if (dt.Rows.Count > 0)
+                //SqlCommand cmd = new SqlCommand("select Email,Password from Employee where Email='" + userEmail + "'and Password='" + password + "'", con);
+                SqlCommand cmd = new SqlCommand("getPassword", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@pID", userID));
+                reader = cmd.ExecuteReader();
+                if(reader.HasRows)
                 {
-                    SqlCommand adminCheck = new SqlCommand("select * from Employee where Email='" + email + "'and Admin='True'", con);
+                    while(reader.Read())
+                    {
+                        userPassword = reader.GetString(0);
+                        userPassword.Trim(); //remove trailing spaces
+                        break;
+                    }
+                }
+                MessageBox.Show(userPassword + password);
+
+                if (password.Equals(userPassword) && !userPassword.Equals(""))
+                {
+                    SqlCommand adminCheck = new SqlCommand("select * from Employee where Email='" + userEmail + "'and Admin='True'", con);
                     //You might need to check the procedure as I'm not sure what you called the Admin column so it could cause errors.
                   //  SqlCommand getID = new SqlCommand("getID", con);
                    // getID.CommandType = CommandType.StoredProcedure;
@@ -97,7 +105,7 @@ namespace ScheduleGenerator
                     else
                     {
                         MessageBox.Show("Login successful");
-                        new UserForm(userIDint).Show();
+                        new UserForm(userID).Show();
 
                         this.Hide();
                     }
