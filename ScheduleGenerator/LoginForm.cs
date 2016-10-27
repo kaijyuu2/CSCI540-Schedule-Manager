@@ -77,26 +77,25 @@ namespace ScheduleGenerator
                         break;
                     }
                 }
-                MessageBox.Show(userPassword + password);
+                reader.Close();
 
                 if (password.Equals(userPassword) && !userPassword.Equals(""))
                 {
-                    SqlCommand adminCheck = new SqlCommand("select * from Employee where Email='" + userEmail + "'and Admin='True'", con);
-                    //You might need to check the procedure as I'm not sure what you called the Admin column so it could cause errors.
-                  //  SqlCommand getID = new SqlCommand("getID", con);
-                   // getID.CommandType = CommandType.StoredProcedure;
-                  //  getID.Parameters.Add(new SqlParameter("@Pemail", email));
-                    SqlDataAdapter idDataAdapter = new SqlDataAdapter(adminCheck);
-
-
-                    //SqlCommand adminCheck = new SqlCommand("getAdmin", con);
+                    SqlCommand adminCheck = new SqlCommand("getAdmin", con);
                     adminCheck.Parameters.Add(new SqlParameter("@pID", userID));
                     adminCheck.CommandType = CommandType.StoredProcedure;
-                    SqlDataAdapter adminDA = new SqlDataAdapter(adminCheck);
-                    DataTable adminDT = new DataTable();
-
-                    adminDA.Fill(adminDT);
-                    if(adminDT.Rows.Count > 0)
+                    bool adminbool = false;
+                    reader = adminCheck.ExecuteReader();
+                    if(reader.HasRows)
+                    {
+                        while(reader.Read())
+                        {
+                            adminbool = reader.GetBoolean(0);
+                            break;
+                        }
+                    }
+                    reader.Close();
+                    if(adminbool)
                     {
                         MessageBox.Show("Login successful");
                         new AdministratorForm().Show();
