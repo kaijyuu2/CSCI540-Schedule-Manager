@@ -35,11 +35,12 @@ namespace ScheduleGenerator
                 int userIDint = Convert.ToInt32(userID);
                 string password = PasswordMaskedTextBox.Text;
 
-                // SqlCommand cmd = new SqlCommand("getPassword", con);
-                // cmd.CommandType = CommandType.StoredProcedure;
-                // cmd.Parameters.Add(new SqlParameter("@pID", email));
+                SqlCommand cmd = new SqlCommand("[dbo].[getPassword]", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@pID", userIDint);
+                cmd.ExecuteNonQuery();
 
-                SqlCommand cmd = new SqlCommand("select EmployeeID,Password from Employee where EmployeeID='" + userID + "'and Password='" + password + "'", con);
+                //SqlCommand cmd = new SqlCommand("select EmployeeID,Password     from Employee where EmployeeID='" + userID + "'and Password='" + password + "'", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -47,14 +48,16 @@ namespace ScheduleGenerator
                 {
                     SqlCommand adminCheck = new SqlCommand("select * from Employee where EmployeeID='" + userID + "'and Admin='True'", con);
                     //You might need to check the procedure as I'm not sure what you called the Admin column so it could cause errors.
-                    SqlDataAdapter idDataAdapter = new SqlDataAdapter(adminCheck);
+                    //SqlDataAdapter idDataAdapter = new SqlDataAdapter(adminCheck);
 
 
-                   // SqlCommand adminCheck = new SqlCommand("getAdmin", con);
-                   // adminCheck.Parameters.Add(new SqlParameter("@pID", userID));
-                   // adminCheck.CommandType = CommandType.StoredProcedure;
-                     DataSet userDataSetID = new DataSet();
-                     idDataAdapter.Fill(userDataSetID, "EmployeeID");
+                   //SqlCommand adminCheck = new SqlCommand("getAdmin", con);
+                    //adminCheck.CommandType = CommandType.StoredProcedure;
+                    //adminCheck.Parameters.AddWithValue("@pID", userIDint);
+                    //adminCheck.ExecuteNonQuery();
+                   
+                    // DataSet userDataSetID = new DataSet();
+                    //idDataAdapter.Fill(userDataSetID, "EmployeeID");
                     //int userID = userDataSetID.
 
                   //  SqlCommand adminCheck = new SqlCommand("getAdmin", con);

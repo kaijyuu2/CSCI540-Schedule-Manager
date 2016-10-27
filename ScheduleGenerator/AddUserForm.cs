@@ -15,7 +15,6 @@ namespace ScheduleGenerator
 {
     public partial class AddUserForm : Form
     {
-        SqlConnection con = new SqlConnection();
         //String serverInfo = "Data Source=MARK-PC\\MWSQLSERVER;Initial Catalog=SchedulingDatabase;Integrated Security=True";
         String serverInfo = "Data Source=HEADQUARTERS\\SQLEXPRESS;Initial Catalog=SchedulingDatabase;Integrated Security=True";
 
@@ -26,29 +25,32 @@ namespace ScheduleGenerator
 
         private void AddUserButton_Click(object sender, EventArgs e)
         {
-            //Call
-            String FirstName = AddFirstNameTextBox.ToString();
-            String LastName = AddLastNameTextBox.ToString();
-            String Email = AddEmailTextBox.ToString();
-            String Password = AddPasswordTextBox.ToString();
-            String ID = addUserIDTextBox.ToString();
-
             SqlConnection con = new SqlConnection(serverInfo);
+            con.Open();
+
+            //Call
+            string FirstName = AddFirstNameTextBox.Text;
+            string LastName = AddLastNameTextBox.Text;
+            string Email = AddEmailTextBox.Text;
+            string Password = AddPasswordTextBox.Text;
+            //string ID = addUserIDTextBox.Text;
+            //int IDint = Convert.ToInt32(ID);
+
             SqlCommand cmd = new SqlCommand("addEmployee", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add( new SqlParameter("@pID", ID));
-            cmd.Parameters.Add(new SqlParameter("@pFirstName", FirstName));
-            cmd.Parameters.Add(new SqlParameter("@pLastName", LastName));
-            cmd.Parameters.Add(new SqlParameter("@pEmail", Email));
-            cmd.Parameters.Add(new SqlParameter("@pPassword", Password));
+            //cmd.Parameters.AddWithValue("@pID", IDint);
+            cmd.Parameters.AddWithValue("@pFirstName", FirstName);
+            cmd.Parameters.AddWithValue("@pLastName", LastName);
+            cmd.Parameters.AddWithValue("@pEmail", Email);
+            cmd.Parameters.AddWithValue("@pPassword", Password);
             //Flat 0 value for the admin bit.
-            cmd.Parameters.Add(new SqlParameter("@pAdmin", 0));
-
+            cmd.Parameters.AddWithValue("@pAdmin", 0);
+            cmd.ExecuteNonQuery();
 
 
 
             //      DataTable dt = new DataTable();
-            con.Open();
+            
             SqlDataAdapter da = new SqlDataAdapter(cmd);
        //     da.Fill(dt);
        //     da.Update(dt);
@@ -59,7 +61,7 @@ namespace ScheduleGenerator
 
         private void AddUserForm_Load(object sender, EventArgs e)
         {// TODO: This line of code loads data into the 'admin.Employee' table. You can move, or remove it, as needed.
-            this.employeeTableAdapter4.Fill(this.admin.Employee);
+            //this.employeeTableAdapter4.Fill(this.admin.Employee);
             /*
                         // TODO: This line of code loads data into the 'password.Employee' table. You can move, or remove it, as needed.
                         this.employeeTableAdapter3.Fill(this.password.Employee);
@@ -71,5 +73,7 @@ namespace ScheduleGenerator
                         this.employeeTableAdapter.Fill(this.firstName.Employee);
                        */
         }
+
+       
     }
 }

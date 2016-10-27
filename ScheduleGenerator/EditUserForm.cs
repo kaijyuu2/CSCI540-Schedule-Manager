@@ -39,7 +39,8 @@ namespace ScheduleGenerator
             //Get first name.
             SqlCommand cmd = new SqlCommand("getFirstName", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@pID", currentID));
+            cmd.Parameters.AddWithValue("@pID", currentID);
+            cmd.ExecuteNonQuery();
             //Store result. I don't know how as you seem to display the knowledge in the login form.
             //label1.Text = firstName;
 
