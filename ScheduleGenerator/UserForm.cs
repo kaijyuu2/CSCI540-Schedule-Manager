@@ -16,8 +16,7 @@ namespace ScheduleGenerator
     public partial class UserForm : Form
     {
         SqlConnection con = new SqlConnection();
-       // String serverInfo = "Data Source=MARK-PC\\MWSQLSERVER;Initial Catalog=SchedulingDatabase;Integrated Security=True";
-        String serverInfo = "Data Source=HEADQUARTERS\\SQLSERVEREXPRESS;Initial Catalog=SchedulingDatabase;Integrated Security=True";
+        String serverInfo = "Data Source=" + System.Environment.GetEnvironmentVariable("COMPUTERNAME") + "\\SQLEXPRESS;Initial Catalog=SchedulingDatabase;Integrated Security=True";
         private int currentUserId;
 
         //Must have a way to keep track of which user is using the form.

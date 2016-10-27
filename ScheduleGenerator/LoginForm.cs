@@ -16,8 +16,7 @@ namespace ScheduleGenerator
     public partial class Form1 : Form
     {
         SqlConnection con = new SqlConnection();
-       // String serverInfo = "Data Source=MARK-PC\\MWSQLSERVER;Initial Catalog=SchedulingDatabase;Integrated Security=True";
-        String serverInfo = "Data Source=YOU\\SQLEXPRESS;Initial Catalog=SchedulingDatabase;Integrated Security=True";
+        String serverInfo = "Data Source="+System.Environment.GetEnvironmentVariable("COMPUTERNAME")+"\\SQLEXPRESS;Initial Catalog=SchedulingDatabase;Integrated Security=True";
 
         public Form1()
         {
