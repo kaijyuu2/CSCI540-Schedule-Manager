@@ -50,6 +50,9 @@ namespace ScheduleGenerator
             cmd.Parameters.Add(new SqlParameter("@pNewStartTime", fromTime));
             cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
 
+            fromSundayUserViewTextbox.Text = fromTime;
+            toSundayUserViewTextbox.Text = toTime;
+
             //Monday
             fromTime = fromMondayTextBox.ToString();
             toTime = toMondayTextBox.ToString();
@@ -62,6 +65,9 @@ namespace ScheduleGenerator
             cmd.Parameters.Add(new SqlParameter("@pNewStartTime", fromTime));
             cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
 
+            fromMondayUserViewTextbox.Text = fromTime;
+            toMondayUserViewTextbox.Text = toTime;
+
             //Tuesday
             fromTime = fromTuesdayTextBox.ToString();
             toTime = toTuesdayTextBox.ToString();
@@ -72,6 +78,9 @@ namespace ScheduleGenerator
             cmd.Parameters.Add(new SqlParameter("@pDayID", 2));
             cmd.Parameters.Add(new SqlParameter("@pNewStartTime", fromTime));
             cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
+
+            fromTuesdayUserViewTextbox.Text = fromTime;
+            toTuesdayUserViewTextbox.Text = toTime;
 
             //Wednesday
             fromTime = fromWednesdayTextBox.ToString();
@@ -84,6 +93,9 @@ namespace ScheduleGenerator
             cmd.Parameters.Add(new SqlParameter("@pNewStartTime", fromTime));
             cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
 
+            fromWednesdayUserViewTextbox.Text = fromTime;
+            toWednesdayUserViewTextbox.Text = toTime;
+
             //Thursday
             fromTime = fromThursdayTextBox.ToString();
             toTime = toThursdayTextBox.ToString();
@@ -94,6 +106,9 @@ namespace ScheduleGenerator
             cmd.Parameters.Add(new SqlParameter("@pDayID", 4));
             cmd.Parameters.Add(new SqlParameter("@pNewStartTime", fromTime));
             cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
+
+            fromThursdayUserViewTextbox.Text = fromTime;
+            toThursdayUserViewTextbox.Text = toTime;
 
             //Friday
             fromTime = fromFridayTextBox.ToString();
@@ -106,6 +121,9 @@ namespace ScheduleGenerator
             cmd.Parameters.Add(new SqlParameter("@pNewStartTime", fromTime));
             cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
 
+            fromFridayUserViewTextbox.Text = fromTime;
+            toFridayUserViewTextbox.Text = toTime;
+
             //Saturday
             fromTime = fromSaturdayTextBox.ToString();
             toTime = toSaturdayTextBox.ToString();
@@ -117,6 +135,8 @@ namespace ScheduleGenerator
             cmd.Parameters.Add(new SqlParameter("@pNewStartTime", fromTime));
             cmd.Parameters.Add(new SqlParameter("@pNewEndTime", toTime));
 
+            fromSaturdayUserViewTextbox.Text = fromTime;
+            toSaturdayUserViewTextbox.Text = toTime;
 
             con.Close();
         }

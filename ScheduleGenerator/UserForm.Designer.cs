@@ -33,14 +33,6 @@
             this.askOffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ExitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ViewScheduleTab = new System.Windows.Forms.TabPage();
-            this.UserScheduleTable = new System.Windows.Forms.TableLayoutPanel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.AvailabilityTab = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
             this.AvailabilityButton = new System.Windows.Forms.Button();
@@ -69,12 +61,36 @@
             this.fromTuesdayTextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.UserTabControl = new System.Windows.Forms.TabControl();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.toSaturdayUserViewTextbox = new System.Windows.Forms.TextBox();
+            this.toFridayUserViewTextbox = new System.Windows.Forms.TextBox();
+            this.toThursdayUserViewTextbox = new System.Windows.Forms.TextBox();
+            this.toWednesdayUserViewTextbox = new System.Windows.Forms.TextBox();
+            this.toTuesdayUserViewTextbox = new System.Windows.Forms.TextBox();
+            this.toMondayUserViewTextbox = new System.Windows.Forms.TextBox();
+            this.toSundayUserViewTextbox = new System.Windows.Forms.TextBox();
+            this.fromSaturdayUserViewTextbox = new System.Windows.Forms.TextBox();
+            this.fromFridayUserViewTextbox = new System.Windows.Forms.TextBox();
+            this.fromThursdayUserViewTextbox = new System.Windows.Forms.TextBox();
+            this.fromWednesdayUserViewTextbox = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.fromSundayUserViewTextbox = new System.Windows.Forms.TextBox();
+            this.fromMondayUserViewTextbox = new System.Windows.Forms.TextBox();
+            this.fromTuesdayUserViewTextbox = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.UserMenuStrip.SuspendLayout();
             this.ViewScheduleTab.SuspendLayout();
-            this.UserScheduleTable.SuspendLayout();
             this.AvailabilityTab.SuspendLayout();
             this.AvailabilityTable.SuspendLayout();
             this.UserTabControl.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // UserMenuStrip
@@ -116,7 +132,7 @@
             // 
             // ViewScheduleTab
             // 
-            this.ViewScheduleTab.Controls.Add(this.UserScheduleTable);
+            this.ViewScheduleTab.Controls.Add(this.tableLayoutPanel1);
             this.ViewScheduleTab.Location = new System.Drawing.Point(4, 25);
             this.ViewScheduleTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ViewScheduleTab.Name = "ViewScheduleTab";
@@ -125,98 +141,6 @@
             this.ViewScheduleTab.TabIndex = 2;
             this.ViewScheduleTab.Text = "View Schedule";
             this.ViewScheduleTab.UseVisualStyleBackColor = true;
-            // 
-            // UserScheduleTable
-            // 
-            this.UserScheduleTable.BackColor = System.Drawing.Color.DarkGray;
-            this.UserScheduleTable.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
-            this.UserScheduleTable.ColumnCount = 7;
-            this.UserScheduleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.15361F));
-            this.UserScheduleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.30773F));
-            this.UserScheduleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.30773F));
-            this.UserScheduleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.30773F));
-            this.UserScheduleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.30773F));
-            this.UserScheduleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.30773F));
-            this.UserScheduleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.30772F));
-            this.UserScheduleTable.Controls.Add(this.label15, 6, 0);
-            this.UserScheduleTable.Controls.Add(this.label16, 5, 0);
-            this.UserScheduleTable.Controls.Add(this.label17, 4, 0);
-            this.UserScheduleTable.Controls.Add(this.label18, 2, 0);
-            this.UserScheduleTable.Controls.Add(this.label19, 1, 0);
-            this.UserScheduleTable.Controls.Add(this.label20, 0, 0);
-            this.UserScheduleTable.Controls.Add(this.label21, 3, 0);
-            this.UserScheduleTable.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold);
-            this.UserScheduleTable.Location = new System.Drawing.Point(5, 6);
-            this.UserScheduleTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.UserScheduleTable.Name = "UserScheduleTable";
-            this.UserScheduleTable.RowCount = 2;
-            this.UserScheduleTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.21053F));
-            this.UserScheduleTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.78947F));
-            this.UserScheduleTable.Size = new System.Drawing.Size(739, 258);
-            this.UserScheduleTable.TabIndex = 1;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(635, 3);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(63, 17);
-            this.label15.TabIndex = 6;
-            this.label15.Text = "Saturday";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(530, 3);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(47, 17);
-            this.label16.TabIndex = 5;
-            this.label16.Text = "Friday";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(425, 3);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(65, 17);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "Thursday";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(215, 3);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(57, 17);
-            this.label18.TabIndex = 2;
-            this.label18.Text = "Tuesday";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(110, 3);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(56, 17);
-            this.label19.TabIndex = 1;
-            this.label19.Text = "Monday";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(6, 3);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(53, 17);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Sunday";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(320, 3);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(77, 17);
-            this.label21.TabIndex = 3;
-            this.label21.Text = "Wednesday";
             // 
             // AvailabilityTab
             // 
@@ -314,7 +238,7 @@
             // toSaturdayTextBox
             // 
             this.toSaturdayTextBox.Location = new System.Drawing.Point(647, 141);
-            this.toSaturdayTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.toSaturdayTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.toSaturdayTextBox.Name = "toSaturdayTextBox";
             this.toSaturdayTextBox.Size = new System.Drawing.Size(79, 22);
             this.toSaturdayTextBox.TabIndex = 23;
@@ -322,7 +246,7 @@
             // toFridayTextBox
             // 
             this.toFridayTextBox.Location = new System.Drawing.Point(562, 141);
-            this.toFridayTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.toFridayTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.toFridayTextBox.Name = "toFridayTextBox";
             this.toFridayTextBox.Size = new System.Drawing.Size(71, 22);
             this.toFridayTextBox.TabIndex = 22;
@@ -330,7 +254,7 @@
             // toThursdayTextBox
             // 
             this.toThursdayTextBox.Location = new System.Drawing.Point(474, 141);
-            this.toThursdayTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.toThursdayTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.toThursdayTextBox.Name = "toThursdayTextBox";
             this.toThursdayTextBox.Size = new System.Drawing.Size(75, 22);
             this.toThursdayTextBox.TabIndex = 21;
@@ -338,7 +262,7 @@
             // toWednesdayTextBox
             // 
             this.toWednesdayTextBox.Location = new System.Drawing.Point(370, 141);
-            this.toWednesdayTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.toWednesdayTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.toWednesdayTextBox.Name = "toWednesdayTextBox";
             this.toWednesdayTextBox.Size = new System.Drawing.Size(79, 22);
             this.toWednesdayTextBox.TabIndex = 20;
@@ -346,7 +270,7 @@
             // toTuesdayTextBox
             // 
             this.toTuesdayTextBox.Location = new System.Drawing.Point(276, 141);
-            this.toTuesdayTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.toTuesdayTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.toTuesdayTextBox.Name = "toTuesdayTextBox";
             this.toTuesdayTextBox.Size = new System.Drawing.Size(79, 22);
             this.toTuesdayTextBox.TabIndex = 19;
@@ -354,7 +278,7 @@
             // toMondayTextBox
             // 
             this.toMondayTextBox.Location = new System.Drawing.Point(182, 141);
-            this.toMondayTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.toMondayTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.toMondayTextBox.Name = "toMondayTextBox";
             this.toMondayTextBox.Size = new System.Drawing.Size(79, 22);
             this.toMondayTextBox.TabIndex = 18;
@@ -362,7 +286,7 @@
             // toSundayTextBox
             // 
             this.toSundayTextBox.Location = new System.Drawing.Point(89, 141);
-            this.toSundayTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.toSundayTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.toSundayTextBox.Name = "toSundayTextBox";
             this.toSundayTextBox.Size = new System.Drawing.Size(79, 22);
             this.toSundayTextBox.TabIndex = 17;
@@ -370,7 +294,7 @@
             // fromSaturdayTextBox
             // 
             this.fromSaturdayTextBox.Location = new System.Drawing.Point(647, 89);
-            this.fromSaturdayTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fromSaturdayTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.fromSaturdayTextBox.Name = "fromSaturdayTextBox";
             this.fromSaturdayTextBox.Size = new System.Drawing.Size(79, 22);
             this.fromSaturdayTextBox.TabIndex = 15;
@@ -378,7 +302,7 @@
             // fromFridayTextBox
             // 
             this.fromFridayTextBox.Location = new System.Drawing.Point(562, 89);
-            this.fromFridayTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fromFridayTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.fromFridayTextBox.Name = "fromFridayTextBox";
             this.fromFridayTextBox.Size = new System.Drawing.Size(71, 22);
             this.fromFridayTextBox.TabIndex = 14;
@@ -386,7 +310,7 @@
             // fromThursdayTextBox
             // 
             this.fromThursdayTextBox.Location = new System.Drawing.Point(474, 89);
-            this.fromThursdayTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fromThursdayTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.fromThursdayTextBox.Name = "fromThursdayTextBox";
             this.fromThursdayTextBox.Size = new System.Drawing.Size(75, 22);
             this.fromThursdayTextBox.TabIndex = 13;
@@ -394,7 +318,7 @@
             // fromWednesdayTextBox
             // 
             this.fromWednesdayTextBox.Location = new System.Drawing.Point(370, 89);
-            this.fromWednesdayTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fromWednesdayTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.fromWednesdayTextBox.Name = "fromWednesdayTextBox";
             this.fromWednesdayTextBox.Size = new System.Drawing.Size(79, 22);
             this.fromWednesdayTextBox.TabIndex = 12;
@@ -465,7 +389,7 @@
             // fromSundayTextBox
             // 
             this.fromSundayTextBox.Location = new System.Drawing.Point(89, 89);
-            this.fromSundayTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fromSundayTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.fromSundayTextBox.Name = "fromSundayTextBox";
             this.fromSundayTextBox.Size = new System.Drawing.Size(79, 22);
             this.fromSundayTextBox.TabIndex = 7;
@@ -473,7 +397,7 @@
             // fromMondayTextBox
             // 
             this.fromMondayTextBox.Location = new System.Drawing.Point(182, 89);
-            this.fromMondayTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fromMondayTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.fromMondayTextBox.Name = "fromMondayTextBox";
             this.fromMondayTextBox.Size = new System.Drawing.Size(79, 22);
             this.fromMondayTextBox.TabIndex = 8;
@@ -481,7 +405,7 @@
             // fromTuesdayTextBox
             // 
             this.fromTuesdayTextBox.Location = new System.Drawing.Point(276, 89);
-            this.fromTuesdayTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fromTuesdayTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.fromTuesdayTextBox.Name = "fromTuesdayTextBox";
             this.fromTuesdayTextBox.Size = new System.Drawing.Size(79, 22);
             this.fromTuesdayTextBox.TabIndex = 9;
@@ -508,6 +432,248 @@
             this.UserTabControl.Size = new System.Drawing.Size(757, 510);
             this.UserTabControl.TabIndex = 1;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.DarkGray;
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
+            this.tableLayoutPanel1.ColumnCount = 8;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 79F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.15361F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.30773F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.30773F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.95092F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.49693F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.88344F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.30772F));
+            this.tableLayoutPanel1.Controls.Add(this.label11, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.toSaturdayUserViewTextbox, 7, 2);
+            this.tableLayoutPanel1.Controls.Add(this.toFridayUserViewTextbox, 6, 2);
+            this.tableLayoutPanel1.Controls.Add(this.toThursdayUserViewTextbox, 5, 2);
+            this.tableLayoutPanel1.Controls.Add(this.toWednesdayUserViewTextbox, 4, 2);
+            this.tableLayoutPanel1.Controls.Add(this.toTuesdayUserViewTextbox, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.toMondayUserViewTextbox, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.toSundayUserViewTextbox, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.fromSaturdayUserViewTextbox, 7, 1);
+            this.tableLayoutPanel1.Controls.Add(this.fromFridayUserViewTextbox, 6, 1);
+            this.tableLayoutPanel1.Controls.Add(this.fromThursdayUserViewTextbox, 5, 1);
+            this.tableLayoutPanel1.Controls.Add(this.fromWednesdayUserViewTextbox, 4, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label12, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label13, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label14, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label15, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label16, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label17, 6, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label18, 7, 0);
+            this.tableLayoutPanel1.Controls.Add(this.fromSundayUserViewTextbox, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.fromMondayUserViewTextbox, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.fromTuesdayUserViewTextbox, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label19, 0, 1);
+            this.tableLayoutPanel1.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 13);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 79F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.60241F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.39759F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(739, 188);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(6, 137);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(24, 15);
+            this.label11.TabIndex = 26;
+            this.label11.Text = "To:";
+            // 
+            // toSaturdayUserViewTextbox
+            // 
+            this.toSaturdayUserViewTextbox.Location = new System.Drawing.Point(647, 141);
+            this.toSaturdayUserViewTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.toSaturdayUserViewTextbox.Name = "toSaturdayUserViewTextbox";
+            this.toSaturdayUserViewTextbox.Size = new System.Drawing.Size(79, 22);
+            this.toSaturdayUserViewTextbox.TabIndex = 23;
+            // 
+            // toFridayUserViewTextbox
+            // 
+            this.toFridayUserViewTextbox.Location = new System.Drawing.Point(562, 141);
+            this.toFridayUserViewTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.toFridayUserViewTextbox.Name = "toFridayUserViewTextbox";
+            this.toFridayUserViewTextbox.Size = new System.Drawing.Size(71, 22);
+            this.toFridayUserViewTextbox.TabIndex = 22;
+            // 
+            // toThursdayUserViewTextbox
+            // 
+            this.toThursdayUserViewTextbox.Location = new System.Drawing.Point(474, 141);
+            this.toThursdayUserViewTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.toThursdayUserViewTextbox.Name = "toThursdayUserViewTextbox";
+            this.toThursdayUserViewTextbox.Size = new System.Drawing.Size(75, 22);
+            this.toThursdayUserViewTextbox.TabIndex = 21;
+            // 
+            // toWednesdayUserViewTextbox
+            // 
+            this.toWednesdayUserViewTextbox.Location = new System.Drawing.Point(370, 141);
+            this.toWednesdayUserViewTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.toWednesdayUserViewTextbox.Name = "toWednesdayUserViewTextbox";
+            this.toWednesdayUserViewTextbox.Size = new System.Drawing.Size(79, 22);
+            this.toWednesdayUserViewTextbox.TabIndex = 20;
+            // 
+            // toTuesdayUserViewTextbox
+            // 
+            this.toTuesdayUserViewTextbox.Location = new System.Drawing.Point(276, 141);
+            this.toTuesdayUserViewTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.toTuesdayUserViewTextbox.Name = "toTuesdayUserViewTextbox";
+            this.toTuesdayUserViewTextbox.Size = new System.Drawing.Size(79, 22);
+            this.toTuesdayUserViewTextbox.TabIndex = 19;
+            // 
+            // toMondayUserViewTextbox
+            // 
+            this.toMondayUserViewTextbox.Location = new System.Drawing.Point(182, 141);
+            this.toMondayUserViewTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.toMondayUserViewTextbox.Name = "toMondayUserViewTextbox";
+            this.toMondayUserViewTextbox.Size = new System.Drawing.Size(79, 22);
+            this.toMondayUserViewTextbox.TabIndex = 18;
+            // 
+            // toSundayUserViewTextbox
+            // 
+            this.toSundayUserViewTextbox.Location = new System.Drawing.Point(89, 141);
+            this.toSundayUserViewTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.toSundayUserViewTextbox.Name = "toSundayUserViewTextbox";
+            this.toSundayUserViewTextbox.Size = new System.Drawing.Size(79, 22);
+            this.toSundayUserViewTextbox.TabIndex = 17;
+            // 
+            // fromSaturdayUserViewTextbox
+            // 
+            this.fromSaturdayUserViewTextbox.Location = new System.Drawing.Point(647, 89);
+            this.fromSaturdayUserViewTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.fromSaturdayUserViewTextbox.Name = "fromSaturdayUserViewTextbox";
+            this.fromSaturdayUserViewTextbox.Size = new System.Drawing.Size(79, 22);
+            this.fromSaturdayUserViewTextbox.TabIndex = 15;
+            // 
+            // fromFridayUserViewTextbox
+            // 
+            this.fromFridayUserViewTextbox.Location = new System.Drawing.Point(562, 89);
+            this.fromFridayUserViewTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.fromFridayUserViewTextbox.Name = "fromFridayUserViewTextbox";
+            this.fromFridayUserViewTextbox.Size = new System.Drawing.Size(71, 22);
+            this.fromFridayUserViewTextbox.TabIndex = 14;
+            // 
+            // fromThursdayUserViewTextbox
+            // 
+            this.fromThursdayUserViewTextbox.Location = new System.Drawing.Point(474, 89);
+            this.fromThursdayUserViewTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.fromThursdayUserViewTextbox.Name = "fromThursdayUserViewTextbox";
+            this.fromThursdayUserViewTextbox.Size = new System.Drawing.Size(75, 22);
+            this.fromThursdayUserViewTextbox.TabIndex = 13;
+            // 
+            // fromWednesdayUserViewTextbox
+            // 
+            this.fromWednesdayUserViewTextbox.Location = new System.Drawing.Point(370, 89);
+            this.fromWednesdayUserViewTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.fromWednesdayUserViewTextbox.Name = "fromWednesdayUserViewTextbox";
+            this.fromWednesdayUserViewTextbox.Size = new System.Drawing.Size(79, 22);
+            this.fromWednesdayUserViewTextbox.TabIndex = 12;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(88, 3);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(53, 17);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Sunday";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(181, 3);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(56, 17);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Monday";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(275, 3);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(57, 17);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Tuesday";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(369, 3);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(77, 17);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "Wednesday";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(473, 3);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(65, 17);
+            this.label16.TabIndex = 4;
+            this.label16.Text = "Thursday";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(561, 3);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(47, 17);
+            this.label17.TabIndex = 5;
+            this.label17.Text = "Friday";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(646, 3);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(63, 17);
+            this.label18.TabIndex = 6;
+            this.label18.Text = "Saturday";
+            // 
+            // fromSundayUserViewTextbox
+            // 
+            this.fromSundayUserViewTextbox.Location = new System.Drawing.Point(89, 89);
+            this.fromSundayUserViewTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.fromSundayUserViewTextbox.Name = "fromSundayUserViewTextbox";
+            this.fromSundayUserViewTextbox.Size = new System.Drawing.Size(79, 22);
+            this.fromSundayUserViewTextbox.TabIndex = 7;
+            // 
+            // fromMondayUserViewTextbox
+            // 
+            this.fromMondayUserViewTextbox.Location = new System.Drawing.Point(182, 89);
+            this.fromMondayUserViewTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.fromMondayUserViewTextbox.Name = "fromMondayUserViewTextbox";
+            this.fromMondayUserViewTextbox.Size = new System.Drawing.Size(79, 22);
+            this.fromMondayUserViewTextbox.TabIndex = 8;
+            // 
+            // fromTuesdayUserViewTextbox
+            // 
+            this.fromTuesdayUserViewTextbox.Location = new System.Drawing.Point(276, 89);
+            this.fromTuesdayUserViewTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.fromTuesdayUserViewTextbox.Name = "fromTuesdayUserViewTextbox";
+            this.fromTuesdayUserViewTextbox.Size = new System.Drawing.Size(79, 22);
+            this.fromTuesdayUserViewTextbox.TabIndex = 9;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Times New Roman", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(6, 85);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(39, 15);
+            this.label19.TabIndex = 25;
+            this.label19.Text = "From:";
+            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -522,13 +688,13 @@
             this.UserMenuStrip.ResumeLayout(false);
             this.UserMenuStrip.PerformLayout();
             this.ViewScheduleTab.ResumeLayout(false);
-            this.UserScheduleTable.ResumeLayout(false);
-            this.UserScheduleTable.PerformLayout();
             this.AvailabilityTab.ResumeLayout(false);
             this.AvailabilityTab.PerformLayout();
             this.AvailabilityTable.ResumeLayout(false);
             this.AvailabilityTable.PerformLayout();
             this.UserTabControl.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -539,14 +705,6 @@
         private System.Windows.Forms.ToolStripMenuItem ExitMenuItem;
         private System.Windows.Forms.MenuStrip UserMenuStrip;
         private System.Windows.Forms.TabPage ViewScheduleTab;
-        private System.Windows.Forms.TableLayoutPanel UserScheduleTable;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TabPage AvailabilityTab;
         private System.Windows.Forms.Button AvailabilityButton;
         private System.Windows.Forms.TableLayoutPanel AvailabilityTable;
@@ -576,5 +734,29 @@
         private System.Windows.Forms.TextBox fromThursdayTextBox;
         private System.Windows.Forms.TextBox fromWednesdayTextBox;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox toSaturdayUserViewTextbox;
+        private System.Windows.Forms.TextBox toFridayUserViewTextbox;
+        private System.Windows.Forms.TextBox toThursdayUserViewTextbox;
+        private System.Windows.Forms.TextBox toWednesdayUserViewTextbox;
+        private System.Windows.Forms.TextBox toTuesdayUserViewTextbox;
+        private System.Windows.Forms.TextBox toMondayUserViewTextbox;
+        private System.Windows.Forms.TextBox toSundayUserViewTextbox;
+        private System.Windows.Forms.TextBox fromSaturdayUserViewTextbox;
+        private System.Windows.Forms.TextBox fromFridayUserViewTextbox;
+        private System.Windows.Forms.TextBox fromThursdayUserViewTextbox;
+        private System.Windows.Forms.TextBox fromWednesdayUserViewTextbox;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox fromSundayUserViewTextbox;
+        private System.Windows.Forms.TextBox fromMondayUserViewTextbox;
+        private System.Windows.Forms.TextBox fromTuesdayUserViewTextbox;
+        private System.Windows.Forms.Label label19;
     }
 }
