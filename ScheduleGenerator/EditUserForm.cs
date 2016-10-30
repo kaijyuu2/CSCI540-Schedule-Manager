@@ -23,7 +23,6 @@ namespace ScheduleGenerator
 
         public EditUserForm()
         {
-            //HAVE TO HAVE THE ID's Loaded into the combobox. I'm not sure how to do this so we need to talk about it.
             InitializeComponent();
             Fillcombo();
         }
