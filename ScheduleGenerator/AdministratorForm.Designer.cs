@@ -35,6 +35,7 @@
             this.editUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ExitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GenerateScheduleTab = new System.Windows.Forms.TabPage();
+            this.ToUserForm = new System.Windows.Forms.Button();
             this.GenerateButton = new System.Windows.Forms.Button();
             this.GenerateTable = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
@@ -45,7 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.AdminTabControl = new System.Windows.Forms.TabControl();
-            this.ToUserForm = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.menuStrip2.SuspendLayout();
             this.GenerateScheduleTab.SuspendLayout();
             this.GenerateTable.SuspendLayout();
@@ -108,6 +109,7 @@
             // 
             // GenerateScheduleTab
             // 
+            this.GenerateScheduleTab.Controls.Add(this.richTextBox1);
             this.GenerateScheduleTab.Controls.Add(this.ToUserForm);
             this.GenerateScheduleTab.Controls.Add(this.GenerateButton);
             this.GenerateScheduleTab.Controls.Add(this.GenerateTable);
@@ -120,6 +122,17 @@
             this.GenerateScheduleTab.Text = "Generate Schedule";
             this.GenerateScheduleTab.UseVisualStyleBackColor = true;
             // 
+            // ToUserForm
+            // 
+            this.ToUserForm.Location = new System.Drawing.Point(442, 354);
+            this.ToUserForm.Margin = new System.Windows.Forms.Padding(2);
+            this.ToUserForm.Name = "ToUserForm";
+            this.ToUserForm.Size = new System.Drawing.Size(118, 31);
+            this.ToUserForm.TabIndex = 3;
+            this.ToUserForm.Text = "Go to Employee View";
+            this.ToUserForm.UseVisualStyleBackColor = true;
+            this.ToUserForm.Click += new System.EventHandler(this.button1_Click);
+            // 
             // GenerateButton
             // 
             this.GenerateButton.Location = new System.Drawing.Point(222, 247);
@@ -129,6 +142,7 @@
             this.GenerateButton.TabIndex = 2;
             this.GenerateButton.Text = "Generate";
             this.GenerateButton.UseVisualStyleBackColor = true;
+            this.GenerateButton.Click += new System.EventHandler(this.GenerateButton_Click);
             // 
             // GenerateTable
             // 
@@ -240,16 +254,13 @@
             this.AdminTabControl.Size = new System.Drawing.Size(568, 414);
             this.AdminTabControl.TabIndex = 2;
             // 
-            // ToUserForm
+            // richTextBox1
             // 
-            this.ToUserForm.Location = new System.Drawing.Point(442, 354);
-            this.ToUserForm.Margin = new System.Windows.Forms.Padding(2);
-            this.ToUserForm.Name = "ToUserForm";
-            this.ToUserForm.Size = new System.Drawing.Size(118, 31);
-            this.ToUserForm.TabIndex = 3;
-            this.ToUserForm.Text = "Go to Employee View";
-            this.ToUserForm.UseVisualStyleBackColor = true;
-            this.ToUserForm.Click += new System.EventHandler(this.button1_Click);
+            this.richTextBox1.Location = new System.Drawing.Point(97, 272);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(348, 96);
+            this.richTextBox1.TabIndex = 4;
+            this.richTextBox1.Text = "";
             // 
             // AdministratorForm
             // 
@@ -294,5 +305,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TabControl AdminTabControl;
         private System.Windows.Forms.Button ToUserForm;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
