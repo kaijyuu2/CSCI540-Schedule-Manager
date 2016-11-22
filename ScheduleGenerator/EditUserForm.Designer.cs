@@ -110,7 +110,7 @@
             this.EditUserBox.Margin = new System.Windows.Forms.Padding(2);
             this.EditUserBox.Name = "EditUserBox";
             this.EditUserBox.Size = new System.Drawing.Size(76, 21);
-            this.EditUserBox.TabIndex = 9;
+            this.EditUserBox.TabIndex = 0;
             // 
             // employeeBindingSource
             // 
@@ -140,7 +140,7 @@
             this.SelectUserButton.Margin = new System.Windows.Forms.Padding(2);
             this.SelectUserButton.Name = "SelectUserButton";
             this.SelectUserButton.Size = new System.Drawing.Size(56, 19);
-            this.SelectUserButton.TabIndex = 11;
+            this.SelectUserButton.TabIndex = 1;
             this.SelectUserButton.Text = "Select";
             this.SelectUserButton.UseVisualStyleBackColor = true;
             this.SelectUserButton.Click += new System.EventHandler(this.SelectUserButton_Click);
@@ -161,7 +161,7 @@
             this.SubmitChangesButton.Margin = new System.Windows.Forms.Padding(2);
             this.SubmitChangesButton.Name = "SubmitChangesButton";
             this.SubmitChangesButton.Size = new System.Drawing.Size(78, 39);
-            this.SubmitChangesButton.TabIndex = 13;
+            this.SubmitChangesButton.TabIndex = 6;
             this.SubmitChangesButton.Text = "Submit";
             this.SubmitChangesButton.UseVisualStyleBackColor = true;
             this.SubmitChangesButton.Click += new System.EventHandler(this.SubmitChangesButton_Click);
@@ -172,7 +172,7 @@
             this.SetPasswordBox.Margin = new System.Windows.Forms.Padding(2);
             this.SetPasswordBox.Name = "SetPasswordBox";
             this.SetPasswordBox.Size = new System.Drawing.Size(76, 20);
-            this.SetPasswordBox.TabIndex = 12;
+            this.SetPasswordBox.TabIndex = 5;
             // 
             // employeeTableAdapter
             // 

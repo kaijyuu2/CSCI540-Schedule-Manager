@@ -39,7 +39,6 @@ namespace ScheduleGenerator
 
         private void AvailabilityButton_Click(object sender, EventArgs e)
         {
-
             try
             {
                 SqlConnection con = new SqlConnection(serverInfo);
@@ -161,7 +160,6 @@ namespace ScheduleGenerator
             {
                 MessageBox.Show(ex.ToString());
             }
-
         }
 
         private void askOffToolStripMenuItem_Click(object sender, EventArgs e)

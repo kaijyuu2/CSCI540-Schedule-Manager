@@ -42,14 +42,22 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+<<<<<<< HEAD
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ScheduleGenerator.exe" size="153600">
+=======
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ScheduleGenerator.exe" size="155648">
+>>>>>>> 0b34ddd5b7f3494e1ac5e09b5143a04f8a34e153
       <assemblyIdentity name="ScheduleGenerator" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>Ds5OUuapPGpGlKbxKHkRuxpRT5WxnfOzqiGoIuWfE2c=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>83Bv+7pk5+qEr5kNjzMggvgi5LRa4AuD0HsfkvdaOag=</dsig:DigestValue>
+>>>>>>> 0b34ddd5b7f3494e1ac5e09b5143a04f8a34e153
       </hash>
     </dependentAssembly>
   </dependency>

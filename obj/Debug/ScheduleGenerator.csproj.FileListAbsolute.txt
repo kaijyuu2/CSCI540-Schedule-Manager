@@ -1,0 +1,133 @@
+C:\Users\Mason Hardy\Documents\Visual Studio 2015\Projects\ScheduleGenerator\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe.config
+C:\Users\Mason Hardy\Documents\Visual Studio 2015\Projects\ScheduleGenerator\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe
+C:\Users\Mason Hardy\Documents\Visual Studio 2015\Projects\ScheduleGenerator\ScheduleGenerator\bin\Debug\ScheduleGenerator.pdb
+C:\Users\Mason Hardy\Documents\Visual Studio 2015\Projects\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.csprojResolveAssemblyReference.cache
+C:\Users\Mason Hardy\Documents\Visual Studio 2015\Projects\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.AddUserForm.resources
+C:\Users\Mason Hardy\Documents\Visual Studio 2015\Projects\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.AdministratorForm.resources
+C:\Users\Mason Hardy\Documents\Visual Studio 2015\Projects\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.EditUserForm.resources
+C:\Users\Mason Hardy\Documents\Visual Studio 2015\Projects\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.UserForm.resources
+C:\Users\Mason Hardy\Documents\Visual Studio 2015\Projects\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.LoginForm.resources
+C:\Users\Mason Hardy\Documents\Visual Studio 2015\Projects\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.Properties.Resources.resources
+C:\Users\Mason Hardy\Documents\Visual Studio 2015\Projects\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.csproj.GenerateResource.Cache
+C:\Users\Mason Hardy\Documents\Visual Studio 2015\Projects\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.exe
+C:\Users\Mason Hardy\Documents\Visual Studio 2015\Projects\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.pdb
+C:\Users\mdhardy\Desktop\ScheduleGenerator\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe.config
+C:\Users\mdhardy\Desktop\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.exe
+C:\Users\mdhardy\Desktop\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.pdb
+C:\Users\mdhardy\Desktop\ScheduleGenerator\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe
+C:\Users\mdhardy\Desktop\ScheduleGenerator\ScheduleGenerator\bin\Debug\ScheduleGenerator.pdb
+C:\Users\mdhardy\Desktop\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.csprojResolveAssemblyReference.cache
+C:\Users\mdhardy\Desktop\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.AddUserForm.resources
+C:\Users\mdhardy\Desktop\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.AdministratorForm.resources
+C:\Users\mdhardy\Desktop\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.EditUserForm.resources
+C:\Users\mdhardy\Desktop\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.TimeOffForm.resources
+C:\Users\mdhardy\Desktop\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.UserForm.resources
+C:\Users\mdhardy\Desktop\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.LoginForm.resources
+C:\Users\mdhardy\Desktop\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.Properties.Resources.resources
+C:\Users\mdhardy\Desktop\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.csproj.GenerateResource.Cache
+C:\Users\mdhardy\Desktop\ScheduleGenerator\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe.manifest
+C:\Users\mdhardy\Desktop\ScheduleGenerator\ScheduleGenerator\bin\Debug\ScheduleGenerator.application
+C:\Users\mdhardy\Desktop\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.exe.manifest
+C:\Users\mdhardy\Desktop\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.application
+D:\school git project\CSCI540-Schedule-Manager\Mason Crap v2\Mason Crap v2\ScheduleGenerator\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe.config
+D:\school git project\CSCI540-Schedule-Manager\Mason Crap v2\Mason Crap v2\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.exe
+D:\school git project\CSCI540-Schedule-Manager\Mason Crap v2\Mason Crap v2\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.pdb
+D:\school git project\CSCI540-Schedule-Manager\Mason Crap v2\Mason Crap v2\ScheduleGenerator\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe.manifest
+D:\school git project\CSCI540-Schedule-Manager\Mason Crap v2\Mason Crap v2\ScheduleGenerator\ScheduleGenerator\bin\Debug\ScheduleGenerator.application
+D:\school git project\CSCI540-Schedule-Manager\Mason Crap v2\Mason Crap v2\ScheduleGenerator\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe
+D:\school git project\CSCI540-Schedule-Manager\Mason Crap v2\Mason Crap v2\ScheduleGenerator\ScheduleGenerator\bin\Debug\ScheduleGenerator.pdb
+D:\school git project\CSCI540-Schedule-Manager\Mason Crap v2\Mason Crap v2\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.csprojResolveAssemblyReference.cache
+D:\school git project\CSCI540-Schedule-Manager\Mason Crap v2\Mason Crap v2\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.AddUserForm.resources
+D:\school git project\CSCI540-Schedule-Manager\Mason Crap v2\Mason Crap v2\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.AdministratorForm.resources
+D:\school git project\CSCI540-Schedule-Manager\Mason Crap v2\Mason Crap v2\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.EditUserForm.resources
+D:\school git project\CSCI540-Schedule-Manager\Mason Crap v2\Mason Crap v2\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.TimeOffForm.resources
+D:\school git project\CSCI540-Schedule-Manager\Mason Crap v2\Mason Crap v2\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.UserForm.resources
+D:\school git project\CSCI540-Schedule-Manager\Mason Crap v2\Mason Crap v2\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.LoginForm.resources
+D:\school git project\CSCI540-Schedule-Manager\Mason Crap v2\Mason Crap v2\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.Properties.Resources.resources
+D:\school git project\CSCI540-Schedule-Manager\Mason Crap v2\Mason Crap v2\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.csproj.GenerateResource.Cache
+D:\school git project\CSCI540-Schedule-Manager\Mason Crap v2\Mason Crap v2\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.exe.manifest
+D:\school git project\CSCI540-Schedule-Manager\Mason Crap v2\Mason Crap v2\ScheduleGenerator\ScheduleGenerator\obj\Debug\ScheduleGenerator.application
+C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe.config
+C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.exe
+C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.pdb
+C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.csprojResolveAssemblyReference.cache
+C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.AddUserForm.resources
+C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.AdministratorForm.resources
+C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.EditUserForm.resources
+C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.TimeOffForm.resources
+C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.UserForm.resources
+C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.Properties.Resources.resources
+C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.csproj.GenerateResource.Cache
+C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.Form1.resources
+C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe.manifest
+C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.application
+C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe
+C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.pdb
+C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.exe.manifest
+C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.application
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe.config
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.exe
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.pdb
+C:\Users\Mason Hardy\Desktop\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe.config
+C:\Users\Mason Hardy\Desktop\ScheduleGenerator\obj\Debug\ScheduleGenerator.exe
+C:\Users\Mason Hardy\Desktop\ScheduleGenerator\obj\Debug\ScheduleGenerator.pdb
+C:\Users\Mason Hardy\Desktop\ScheduleGenerator\obj\Debug\ScheduleGenerator.csprojResolveAssemblyReference.cache
+C:\Users\Mason Hardy\Desktop\ScheduleGenerator\obj\Debug\ScheduleGenerator.AddUserForm.resources
+C:\Users\Mason Hardy\Desktop\ScheduleGenerator\obj\Debug\ScheduleGenerator.AdministratorForm.resources
+C:\Users\Mason Hardy\Desktop\ScheduleGenerator\obj\Debug\ScheduleGenerator.EditUserForm.resources
+C:\Users\Mason Hardy\Desktop\ScheduleGenerator\obj\Debug\ScheduleGenerator.TimeOffForm.resources
+C:\Users\Mason Hardy\Desktop\ScheduleGenerator\obj\Debug\ScheduleGenerator.UserForm.resources
+C:\Users\Mason Hardy\Desktop\ScheduleGenerator\obj\Debug\ScheduleGenerator.Form1.resources
+C:\Users\Mason Hardy\Desktop\ScheduleGenerator\obj\Debug\ScheduleGenerator.Properties.Resources.resources
+C:\Users\Mason Hardy\Desktop\ScheduleGenerator\obj\Debug\ScheduleGenerator.csproj.GenerateResource.Cache
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe.config
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.exe
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.pdb
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.csprojResolveAssemblyReference.cache
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.AddUserForm.resources
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.AdministratorForm.resources
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.EditUserForm.resources
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.TimeOffForm.resources
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.UserForm.resources
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.Form1.resources
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.Properties.Resources.resources
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.csproj.GenerateResource.Cache
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe.manifest
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.application
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.pdb
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.exe.manifest
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.application
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.csprojResolveAssemblyReference.cache
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.AddUserForm.resources
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.AdministratorForm.resources
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.EditUserForm.resources
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.TimeOffForm.resources
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.UserForm.resources
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.Form1.resources
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.Properties.Resources.resources
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.csproj.GenerateResource.Cache
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe.manifest
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.application
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.pdb
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.exe.manifest
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.application
+C:\Users\Jared\Pictures\seProject\CSCI540-Schedule-Manager\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe.config
+C:\Users\Jared\Pictures\seProject\CSCI540-Schedule-Manager\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.exe
+C:\Users\Jared\Pictures\seProject\CSCI540-Schedule-Manager\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.pdb
+C:\Users\Jared\Pictures\seProject\CSCI540-Schedule-Manager\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe.manifest
+C:\Users\Jared\Pictures\seProject\CSCI540-Schedule-Manager\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.application
+C:\Users\Jared\Pictures\seProject\CSCI540-Schedule-Manager\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe
+C:\Users\Jared\Pictures\seProject\CSCI540-Schedule-Manager\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.pdb
+C:\Users\Jared\Pictures\seProject\CSCI540-Schedule-Manager\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.csprojResolveAssemblyReference.cache
+C:\Users\Jared\Pictures\seProject\CSCI540-Schedule-Manager\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.AddUserForm.resources
+C:\Users\Jared\Pictures\seProject\CSCI540-Schedule-Manager\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.AdministratorForm.resources
+C:\Users\Jared\Pictures\seProject\CSCI540-Schedule-Manager\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.EditUserForm.resources
+C:\Users\Jared\Pictures\seProject\CSCI540-Schedule-Manager\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.TimeOffForm.resources
+C:\Users\Jared\Pictures\seProject\CSCI540-Schedule-Manager\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.UserForm.resources
+C:\Users\Jared\Pictures\seProject\CSCI540-Schedule-Manager\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.Form1.resources
+C:\Users\Jared\Pictures\seProject\CSCI540-Schedule-Manager\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.Properties.Resources.resources
+C:\Users\Jared\Pictures\seProject\CSCI540-Schedule-Manager\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.csproj.GenerateResource.Cache
+C:\Users\Jared\Pictures\seProject\CSCI540-Schedule-Manager\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.exe.manifest
+C:\Users\Jared\Pictures\seProject\CSCI540-Schedule-Manager\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.application
