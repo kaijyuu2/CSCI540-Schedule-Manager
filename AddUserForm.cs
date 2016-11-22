@@ -15,7 +15,9 @@ namespace ScheduleGenerator
 {
     public partial class AddUserForm : Form
     {
-		String serverInfo = "Data Source=" + System.Environment.GetEnvironmentVariable("COMPUTERNAME") + "\\SQLEXPRESS;Initial Catalog=SchedulingDatabase;Integrated Security=True";
+        //String serverInfo = "Data Source=MARK-PC\\MWSQLSERVER;Initial Catalog=SchedulingDatabase;Integrated Security=True";
+        //String serverInfo = "Data Source=HEADQUARTERS\\SQLEXPRESS;Initial Catalog=SchedulingDatabase;Integrated Security=True";
+        String serverInfo = "Data Source=.;Initial Catalog=SchedulingDatabase;Integrated Security=True";
 
         public AddUserForm()
         {
@@ -24,38 +26,45 @@ namespace ScheduleGenerator
 
         private void AddUserButton_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(serverInfo);
-            con.Open();
+            if (!string.IsNullOrEmpty(AddFirstNameTextBox.Text) && !string.IsNullOrEmpty(AddLastNameTextBox.Text) && !string.IsNullOrEmpty(AddEmailTextBox.Text) && !string.IsNullOrEmpty(AddPasswordTextBox.Text))
+            {
+                SqlConnection con = new SqlConnection(serverInfo);
+                con.Open();
 
-            //Call
-            string FirstName = AddFirstNameTextBox.Text;
-            string LastName = AddLastNameTextBox.Text;
-            string Email = AddEmailTextBox.Text;
-            string Password = AddPasswordTextBox.Text;
-            //string ID = addUserIDTextBox.Text;
-            //int IDint = Convert.ToInt32(ID);
+                //Call
+                string FirstName = AddFirstNameTextBox.Text;
+                string LastName = AddLastNameTextBox.Text;
+                string Email = AddEmailTextBox.Text;
+                string Password = AddPasswordTextBox.Text;
+                //string ID = addUserIDTextBox.Text;
+                //int IDint = Convert.ToInt32(ID);
 
-            SqlCommand cmd = new SqlCommand("addEmployee", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            //cmd.Parameters.AddWithValue("@pID", IDint);
-            cmd.Parameters.AddWithValue("@pFirstName", FirstName);
-            cmd.Parameters.AddWithValue("@pLastName", LastName);
-            cmd.Parameters.AddWithValue("@pEmail", Email);
-            cmd.Parameters.AddWithValue("@pPassword", Password);
-            //Flat 0 value for the admin bit.
-            cmd.Parameters.AddWithValue("@pAdmin", 0);
-            cmd.ExecuteNonQuery();
+                SqlCommand cmd = new SqlCommand("addEmployee", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                //cmd.Parameters.AddWithValue("@pID", IDint);
+                cmd.Parameters.AddWithValue("@pFirstName", FirstName);
+                cmd.Parameters.AddWithValue("@pLastName", LastName);
+                cmd.Parameters.AddWithValue("@pEmail", Email);
+                cmd.Parameters.AddWithValue("@pPassword", Password);
+                //Flat 0 value for the admin bit.
+                cmd.Parameters.AddWithValue("@pAdmin", 0);
+                //The out param
+                cmd.Parameters.Add("@id", SqlDbType.Int).Direction = ParameterDirection.Output;
+                cmd.ExecuteNonQuery();
 
 
 
-            //      DataTable dt = new DataTable();
-            
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-       //     da.Fill(dt);
-       //     da.Update(dt);
-            con.Close();
-            MessageBox.Show("User was added!");
-            this.Hide();
+                //      DataTable dt = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                //     da.Fill(dt);
+                //     da.Update(dt);
+                con.Close();
+                MessageBox.Show("User was added and Id is: " + cmd.Parameters["@id"].Value.ToString());
+                this.Hide();
+            }
+            else
+                MessageBox.Show("Please enter the required details.");
         }
 
         private void AddUserForm_Load(object sender, EventArgs e)
@@ -73,6 +82,6 @@ namespace ScheduleGenerator
                        */
         }
 
-       
+
     }
 }

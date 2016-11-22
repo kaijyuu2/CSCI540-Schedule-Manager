@@ -102,7 +102,7 @@
             this.AddUserButton.Margin = new System.Windows.Forms.Padding(2);
             this.AddUserButton.Name = "AddUserButton";
             this.AddUserButton.Size = new System.Drawing.Size(98, 25);
-            this.AddUserButton.TabIndex = 4;
+            this.AddUserButton.TabIndex = 2;
             this.AddUserButton.Text = "Add Employee";
             this.AddUserButton.UseVisualStyleBackColor = true;
             this.AddUserButton.Click += new System.EventHandler(this.AddUserButton_Click);
@@ -114,7 +114,7 @@
             this.AddFirstNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.AddFirstNameTextBox.Name = "AddFirstNameTextBox";
             this.AddFirstNameTextBox.Size = new System.Drawing.Size(116, 20);
-            this.AddFirstNameTextBox.TabIndex = 0;
+            this.AddFirstNameTextBox.TabIndex = 3;
             // 
             // employeeBindingSource
             // 
@@ -133,7 +133,7 @@
             this.AddLastNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.AddLastNameTextBox.Name = "AddLastNameTextBox";
             this.AddLastNameTextBox.Size = new System.Drawing.Size(116, 20);
-            this.AddLastNameTextBox.TabIndex = 1;
+            this.AddLastNameTextBox.TabIndex = 4;
             // 
             // employeeBindingSource1
             // 
@@ -163,7 +163,7 @@
             this.AddPasswordTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.AddPasswordTextBox.Name = "AddPasswordTextBox";
             this.AddPasswordTextBox.Size = new System.Drawing.Size(76, 20);
-            this.AddPasswordTextBox.TabIndex = 3;
+            this.AddPasswordTextBox.TabIndex = 6;
             // 
             // employeeBindingSource3
             // 
@@ -182,7 +182,7 @@
             this.AddEmailTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.AddEmailTextBox.Name = "AddEmailTextBox";
             this.AddEmailTextBox.Size = new System.Drawing.Size(116, 20);
-            this.AddEmailTextBox.TabIndex = 2;
+            this.AddEmailTextBox.TabIndex = 10;
             // 
             // employeeBindingSource2
             // 

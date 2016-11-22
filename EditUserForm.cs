@@ -17,13 +17,16 @@ namespace ScheduleGenerator
     {
         //PLEASE NOTE NO CHECKS FOR ENTRY OF THIS FORM HAVE BEEN ADDED YET.
         SqlConnection con = new SqlConnection();
-		String serverInfo = "Data Source=" + System.Environment.GetEnvironmentVariable("COMPUTERNAME") + "\\SQLEXPRESS;Initial Catalog=SchedulingDatabase;Integrated Security=True";
-        private String currentID;
+        //String serverInfo = "Data Source=MARK-PC\\MWSQLSERVER;Initial Catalog=SchedulingDatabase;Integrated Security=True";
+        //String serverInfo = "Data Source=HEADQUARTERS\\SQLEXPRESS;Initial Catalog=SchedulingDatabase;Integrated Security=True";
+        String serverInfo = "Data Source=.;Initial Catalog=SchedulingDatabase;Integrated Security=True";
+        private int currentID;
 
         public EditUserForm()
         {
             InitializeComponent();
             Fillcombo();
+            SubmitChangesButton.Enabled = false;
         }
 
         void Fillcombo()
@@ -36,7 +39,7 @@ namespace ScheduleGenerator
             {
                 SqlDataReader dr = fillName.ExecuteReader();
 
-                while(dr.Read())
+                while (dr.Read())
                 {
                     EditUserBox.Items.Add(dr["EmployeeID"]);
                 }
@@ -44,7 +47,7 @@ namespace ScheduleGenerator
                 dr.Close();
                 dr.Dispose();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
@@ -52,8 +55,8 @@ namespace ScheduleGenerator
 
         private void SelectUserButton_Click(object sender, EventArgs e)
         {
-            string currentID = EditUserBox.Text;
-            int currentIDint = Convert.ToInt32(currentID);
+            string strCurrentID = EditUserBox.Text;
+            currentID = Convert.ToInt32(strCurrentID);
 
 
             //Instead of having all of these label click methods this info needs to load on selection of employee.
@@ -64,8 +67,8 @@ namespace ScheduleGenerator
             SqlCommand cmd = new SqlCommand("getFirstName", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@pID", currentIDint);
-//            cmd.ExecuteNonQuery();
+            cmd.Parameters.AddWithValue("@pID", currentID);
+            //            cmd.ExecuteNonQuery();
             //Store result. I don't know how as you seem to display the knowledge in the login form.
             SetFirstNameTextBox.Text = cmd.ExecuteScalar().ToString();
 
@@ -92,6 +95,8 @@ namespace ScheduleGenerator
 
 
             con.Close();
+
+            SubmitChangesButton.Enabled = true;
         }
 
         private void EditUserForm_Load(object sender, EventArgs e)
@@ -105,40 +110,48 @@ namespace ScheduleGenerator
 
         private void SubmitChangesButton_Click(object sender, EventArgs e)
         {
-            //Update users password.
-            string newPassword = SetEmailBoxx.Text;
-            string newEmail = SetPasswordBox.Text;
-            string newLName = SetLastNameTextBox.Text;
-            string newFName = SetFirstNameTextBox.Text;
+            if (!string.IsNullOrEmpty(SetEmailBoxx.Text) && !string.IsNullOrEmpty(SetPasswordBox.Text) && !string.IsNullOrEmpty(SetLastNameTextBox.Text) && !string.IsNullOrEmpty(SetFirstNameTextBox.Text))
+            {
+                //Update users password.
+                string newPassword = SetPasswordBox.Text;
+                string newEmail = SetEmailBoxx.Text;
+                string newLName = SetLastNameTextBox.Text;
+                string newFName = SetFirstNameTextBox.Text;
 
-            SqlConnection con = new SqlConnection(serverInfo);
-            con.Open();
+                SqlConnection con = new SqlConnection(serverInfo);
+                con.Open();
 
-            SqlCommand cmd = new SqlCommand("setPassword", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@pID", currentID));
-            cmd.Parameters.Add(new SqlParameter("@pNewPassword", newPassword));
-            cmd.ExecuteNonQuery();
+                SqlCommand cmd = new SqlCommand("setPassword", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@pID", currentID));
+                cmd.Parameters.Add(new SqlParameter("@pNewPassword", newPassword));
+                cmd.ExecuteNonQuery();
 
-            cmd = new SqlCommand("setEmail", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@pID", currentID));
-            cmd.Parameters.Add(new SqlParameter("@pNewEmail", newEmail));
-            cmd.ExecuteNonQuery();
-            
-            cmd = new SqlCommand("setLastName", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@pID", currentID));
-            cmd.Parameters.Add(new SqlParameter("@pNewLastName", newLName));
-            cmd.ExecuteNonQuery();
+                cmd = new SqlCommand("setEmail", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@pID", currentID));
+                cmd.Parameters.Add(new SqlParameter("@pNewEmail", newEmail));
+                cmd.ExecuteNonQuery();
 
-            cmd = new SqlCommand("setFirstName", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@pID", currentID));
-            cmd.Parameters.Add(new SqlParameter("@pNewFirstName", newFName));
-            cmd.ExecuteNonQuery();
+                cmd = new SqlCommand("setLastName", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@pID", currentID));
+                cmd.Parameters.Add(new SqlParameter("@pNewLastName", newLName));
+                cmd.ExecuteNonQuery();
 
-            con.Close();
+                cmd = new SqlCommand("setFirstName", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@pID", currentID));
+                cmd.Parameters.Add(new SqlParameter("@pNewFirstName", newFName));
+                cmd.ExecuteNonQuery();
+
+                con.Close();
+
+                MessageBox.Show("Details saved successfully.");
+                this.Hide();
+            }
+            else
+                MessageBox.Show("Please fill in the required details.");
         }
     }
 }

@@ -2,26 +2,61 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.Sql;
-using System.Data.OleDb;
-using System.Data.SqlClient;
 
 namespace ScheduleGenerator
 {
     public partial class AdministratorForm : Form
     {
-        SqlConnection con = new SqlConnection();
-		String serverInfo = "Data Source=" + System.Environment.GetEnvironmentVariable("COMPUTERNAME") + "\\SQLEXPRESS;Initial Catalog=SchedulingDatabase;Integrated Security=True";
-        Availability[] Availabilities = new Availability[50];
-
+        String serverInfo = "Data Source=.;Initial Catalog=SchedulingDatabase;Integrated Security=True";
         public AdministratorForm()
         {
             InitializeComponent();
+            LoadSchedule();
+        }
+
+        private void LoadSchedule()
+        {
+            SqlConnection con = new SqlConnection(serverInfo);
+            //SqlConnection con = new SqlConnection(serverInfo);
+            con.Open();
+            try
+            {
+                SqlCommand cmd = null;
+                for (int i = 1; i <= 7; i++)
+                {
+                    for (int j = 1; j <= 12; j++)
+                    {
+                        cmd = con.CreateCommand();
+                        cmd.CommandText = "Select TOP 1 EmployeeID from FinalSchedule where DayID=" + i + " and DurationID=" + j + " order by TimeStamp desc";
+
+                        int? result = ((int?)cmd.ExecuteScalar());
+                        if (result == null || result == 0)
+                        {
+                            Label lbl = this.Controls.Find("lbl" + i.ToString() + j.ToString(), true).FirstOrDefault() as Label;
+                            lbl.Text = "NA";
+                        }
+                        else
+                        {
+                            Label lbl = this.Controls.Find("lbl" + i.ToString() + j.ToString(), true).FirstOrDefault() as Label;
+                            lbl.Text = "Emp-ID: " + result;
+                        }
+                        cmd.Dispose();
+                        cmd = null;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {                
+                MessageBox.Show(ex.Message.ToString());
+            }
+            con.Close();
+            con.Dispose();
         }
 
         private void ExitMenuItem_Click(object sender, EventArgs e)
@@ -52,177 +87,59 @@ namespace ScheduleGenerator
 
         private void GenerateButton_Click(object sender, EventArgs e)
         {
-            //For each day of the week.         
-
-            for (int i = 0; i < 7; i++)
-            {
-                //i represents the day of the week.
-                fillArray(i);
-                //Select availabilites to use for the day based on the current array of availabilities.
-                selectAvailabilites(Availabilities);
-                wipeAvailabilites();
-
-            }
-        }
-
-        private void fillArray(int day)
-        {
-            //Initialize the array.
-            for (int i = 0; i < Availabilities.Length; i++)
-            {
-                Availabilities[i] = new Availability();
-            }
-
-            //Open connection.
             SqlConnection con = new SqlConnection(serverInfo);
+            //SqlConnection con = new SqlConnection(serverInfo);
             con.Open();
-            //Get availabilities by day.
-
-            SqlCommand cmd = new SqlCommand("getDayAvailabilities", con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            cmd.CommandType = CommandType.StoredProcedure;
-            //By the day number.
-            cmd.Parameters.AddWithValue("@pDayID", day);
-
-            //Get the information for each index from the database.
-            int counter = 0;
             try
             {
-                SqlDataReader dr = cmd.ExecuteReader();
-
-                while (dr.Read())
+                for (int i = 1; i <= 7; i++)
                 {
-                    //For each index create a new object for the array.
-                    //Converts object to string, and string to int to put into array.
-                    Availabilities[counter] = new Availability(Int32.Parse(dr["AvailabilityID"].ToString()), Int32.Parse(dr["EmployeeID"].ToString()),
-                        Int32.Parse(dr["DayID"].ToString()), Int32.Parse(dr["StartTime"].ToString()), Int32.Parse(dr["EndTime"].ToString()));
-                    counter++;
-                }
+                    for (int j = 1; j <= 12; j++)
+                    {
+                        SqlCommand cmd = new SqlCommand("select EmployeeID from Availability where DayID=" + i + "and DurationID=" + j, con);
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        if (dt.Rows.Count > 0)
+                        {
+                            int rInt = 0;
+                            if (dt.Rows.Count == 1)
+                                rInt = 0;
+                            else
+                            {
+                                Random r = new Random();
+                                rInt = r.Next(0, dt.Rows.Count - 1);
+                            }
+                            cmd.Dispose();
+                            cmd = null;
+                            cmd = new SqlCommand("[dbo].[addSchedule]", con);
+                            cmd.CommandType = CommandType.StoredProcedure;
 
-                dr.Close();
-                dr.Dispose();
+                            cmd.Parameters.AddWithValue("@pNewEmployeeID", dt.Rows[rInt].Field<int>("EmployeeID"));
+                            //Day id is 1 for Sunday.
+                            cmd.Parameters.AddWithValue("@pNewDayID", i);
+                            cmd.Parameters.AddWithValue("@pDurationID", j);
+                            cmd.ExecuteNonQuery();
+                            cmd.Dispose();
+                            da.Dispose();
+                            dt.Dispose();
+                            Label lbl = this.Controls.Find("lbl" + i.ToString() + j.ToString(), true).FirstOrDefault() as Label;
+                            lbl.Text = "Emp-ID: " + dt.Rows[rInt].Field<int>("EmployeeID");
+                        }
+                        else
+                        {
+                            cmd.Dispose();
+                            da.Dispose();
+                            dt.Dispose();
+                        }
+                    }
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.Message.ToString());
             }
-
-            for(int i = 0; i < Availabilities.Length; i++)
-            {
-                int startTime = Availabilities[i].getStartTime();
-                startTime /= 100;
-                Availabilities[i].setStartTime(startTime);
-
-                int endTime = Availabilities[i].getEndTime();
-                endTime /= 100;
-                Availabilities[i].setEndTime(endTime);
-            }
-
+            con.Dispose();
         }
-
-        private void selectAvailabilites(Availability[] availabilities)
-        {
-            //Checkpad for hours worked per day
-            int[] checkPad = new int[18];
-            Random generator = new Random();
-            Availability selected = new Availability();
-            //Not correct because byRef and not byVal? Should I recopy a new array?
-            selected = availabilities[generator.Next(availabilities.Length)];
-
-            for (int i = 0; i < checkPad.Length; i++)
-            {
-                if(i < 9)
-                {
-                    checkPad[i] = 1;
-                }
-                else
-                {
-                    checkPad[i] = 0;
-                }
-               
-            }
-
-            //Add this availability to the database for schedule table
-
-            int start = 0, end = 0;
-
-            start = selected.getStartTime();
-            end = selected.getEndTime();
-
-            //Block off times that the selected user takes up.
-            for (; start <= end; start++)
-            {
-                checkPad[start] = 1;
-            }
-
-            //Fill out rest of time blocks.
-
-            //For each in array
-            for (int i = 0; i < availabilities.Length; i++)
-            {
-                selected = availabilities[i];
-                start = selected.getStartTime();
-                end = selected.getEndTime();
-
-                for (; start <= end; start++)
-                {
-                    if (checkPad[start] == 0)
-                    {
-                        //Add the availability to the db.
-                        richTextBox1.Text += "Emp ID: " + availabilities[i].getEmployeeID() + " Day ID: " + availabilities[i].getDayID() + " Start Time: " + availabilities[i].getStartTime() + " End Time: " + availabilities[i].getEndTime() + " \n";
-                        checkPad[start] = 1;
-                        //Delete the availability array or something.
-                        //Here
-                    }
-                }
-
-                //Catch last hour working.
-                if((checkPad[start - 1] == 0))
-                {
-                    checkPad[start - 1] = 1;
-                }
-
-                //Add a check to see if checkpad is full? Save time
-                if (checkFull(checkPad))
-                {
-                    break;
-                }
-
-            }
-            con.Close();
-        }
-
-        private void wipeAvailabilites()
-        {
-            //Remove availabilities from the database.
-            SqlConnection con = new SqlConnection(serverInfo);
-            con.Open();
-
-
-            SqlCommand cmd = new SqlCommand("clearAvailabilities", con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            cmd.CommandType = CommandType.StoredProcedure;
-
-            cmd.ExecuteNonQuery();
-
-            con.Close();
-        }
-
-        private Boolean checkFull(int[] array)
-        {
-            for(int i = 0; i < array.Length; i++)
-            {
-                if(array[i] == 0)
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
     }
-
-
-
 }
