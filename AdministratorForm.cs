@@ -16,7 +16,7 @@ namespace ScheduleGenerator
     public partial class AdministratorForm : Form
     {
         SqlConnection con = new SqlConnection();
-        String serverInfo = "Data Source=HEADQUARTERS\\SQLEXPRESS;Initial Catalog=SchedulingDatabase;Integrated Security=True";
+		String serverInfo = "Data Source=" + System.Environment.GetEnvironmentVariable("COMPUTERNAME") + "\\SQLEXPRESS;Initial Catalog=SchedulingDatabase;Integrated Security=True";
         Availability[] Availabilities = new Availability[50];
 
         public AdministratorForm()
