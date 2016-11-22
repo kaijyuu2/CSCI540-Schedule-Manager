@@ -1,0 +1,9 @@
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\bin\Debug\ScheduleGenerator.exe.config
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\obj\Debug\ScheduleGenerator.csprojResolveAssemblyReference.cache
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\obj\Debug\ScheduleGenerator.AddUserForm.resources
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\obj\Debug\ScheduleGenerator.AdministratorForm.resources
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\obj\Debug\ScheduleGenerator.EditUserForm.resources
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\obj\Debug\ScheduleGenerator.TimeOffForm.resources
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\obj\Debug\ScheduleGenerator.UserForm.resources
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\obj\Debug\ScheduleGenerator.Form1.resources
+C:\Users\Jared\Desktop\CSCI540-Schedule-Manager\obj\Debug\ScheduleGenerator.csproj.GenerateResource.Cache
