@@ -28,6 +28,17 @@ namespace ScheduleGenerator
         {
             try
             {
+                if (UsernameTextBox.Text.Length <= 0)
+                {
+                    MessageBox.Show("Please enter a user ID.");
+                    return;
+                }
+                if (PasswordMaskedTextBox.Text.Length <= 0)
+                {
+                    MessageBox.Show("Please enter a password.");
+                    return;
+                }
+
                 SqlConnection con = new SqlConnection(serverInfo);
                 con.Open();
 
