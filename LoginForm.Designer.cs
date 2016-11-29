@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.PasswordLabel = new System.Windows.Forms.Label();
-            this.UsernameTextBox = new System.Windows.Forms.TextBox();
+            this.UsernameTextBox = new System.Windows.Forms.MaskedTextBox();
             this.employeeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.email = new ScheduleGenerator.Email();
             this.PasswordMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
@@ -72,9 +72,12 @@
             this.UsernameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource1, "Email", true));
             this.UsernameTextBox.Location = new System.Drawing.Point(169, 82);
             this.UsernameTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.UsernameTextBox.Mask = "00000";
             this.UsernameTextBox.Name = "UsernameTextBox";
+            this.UsernameTextBox.PromptChar = ' ';
             this.UsernameTextBox.Size = new System.Drawing.Size(86, 20);
             this.UsernameTextBox.TabIndex = 2;
+            this.UsernameTextBox.ValidatingType = typeof(int);
             // 
             // employeeBindingSource1
             // 
@@ -119,6 +122,7 @@
             // 
             // ExitButton
             // 
+            this.ExitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.ExitButton.Location = new System.Drawing.Point(198, 147);
             this.ExitButton.Margin = new System.Windows.Forms.Padding(2);
             this.ExitButton.Name = "ExitButton";
@@ -152,6 +156,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Scheduler Suite 2016 v2.1.3";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.email)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
@@ -165,7 +170,7 @@
 
         private System.Windows.Forms.Label UsernameLabel;
         private System.Windows.Forms.Label PasswordLabel;
-        private System.Windows.Forms.TextBox UsernameTextBox;
+        private System.Windows.Forms.MaskedTextBox UsernameTextBox;
         private System.Windows.Forms.MaskedTextBox PasswordMaskedTextBox;
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.Button ExitButton;

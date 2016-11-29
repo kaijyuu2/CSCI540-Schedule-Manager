@@ -18,7 +18,8 @@ namespace ScheduleGenerator
         //PLEASE NOTE NO CHECKS FOR ENTRY OF THIS FORM HAVE BEEN ADDED YET.
         SqlConnection con = new SqlConnection();
 		String serverInfo = "Data Source=" + System.Environment.GetEnvironmentVariable("COMPUTERNAME") + "\\SQLEXPRESS;Initial Catalog=SchedulingDatabase;Integrated Security=True";
-        private String currentID;
+        private List<int> employeeIDs = new List<int>();
+        private int currentID;
 
         public EditUserForm()
         {
@@ -38,7 +39,8 @@ namespace ScheduleGenerator
 
                 while(dr.Read())
                 {
-                    EditUserBox.Items.Add(dr["EmployeeID"]);
+                    EditUserBox.Items.Add(dr["First name"] + " " + dr["Last name"]);
+                    employeeIDs.Add(int.Parse(dr["EmployeeID"].ToString()));
                 }
 
                 dr.Close();
@@ -52,9 +54,7 @@ namespace ScheduleGenerator
 
         private void SelectUserButton_Click(object sender, EventArgs e)
         {
-            string currentID = EditUserBox.Text;
-            int currentIDint = Convert.ToInt32(currentID);
-
+            currentID = employeeIDs[EditUserBox.SelectedIndex];
 
             //Instead of having all of these label click methods this info needs to load on selection of employee.
             SqlConnection con = new SqlConnection(serverInfo);
@@ -64,7 +64,7 @@ namespace ScheduleGenerator
             SqlCommand cmd = new SqlCommand("getFirstName", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@pID", currentIDint);
+            cmd.Parameters.AddWithValue("@pID", currentID);
 //            cmd.ExecuteNonQuery();
             //Store result. I don't know how as you seem to display the knowledge in the login form.
             SetFirstNameTextBox.Text = cmd.ExecuteScalar().ToString();
@@ -72,7 +72,7 @@ namespace ScheduleGenerator
             //Get last name.
             cmd = new SqlCommand("getLastName", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@pID", currentID));
+            cmd.Parameters.AddWithValue("@pID", currentID);
             //Store result.
             SetLastNameTextBox.Text = cmd.ExecuteScalar().ToString();
 
