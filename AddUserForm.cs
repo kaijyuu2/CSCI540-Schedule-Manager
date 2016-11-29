@@ -24,6 +24,26 @@ namespace ScheduleGenerator
 
         private void AddUserButton_Click(object sender, EventArgs e)
         {
+            if (AddFirstNameTextBox.TextLength <= 0)
+            {
+                MessageBox.Show("Please enter a first name.");
+                return;
+            }
+            if (AddLastNameTextBox.TextLength <= 0)
+            {
+                MessageBox.Show("Please enter a last name.");
+                return;
+            }
+            if (AddEmailTextBox.TextLength <= 0)
+            {
+                MessageBox.Show("Please enter an email.");
+                return;
+            }
+            if (AddPasswordTextBox.TextLength <= 0)
+            {
+                MessageBox.Show("Please entr a password.");
+                return;
+            }
             SqlConnection con = new SqlConnection(serverInfo);
             con.Open();
 

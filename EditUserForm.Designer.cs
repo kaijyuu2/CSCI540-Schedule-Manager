@@ -39,7 +39,6 @@
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.schedulingDatabaseDataSet1 = new ScheduleGenerator.SchedulingDatabaseDataSet1();
             this.label4 = new System.Windows.Forms.Label();
-            this.SelectUserButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.SubmitChangesButton = new System.Windows.Forms.Button();
             this.SetPasswordBox = new System.Windows.Forms.TextBox();
@@ -111,6 +110,7 @@
             this.EditUserBox.Name = "EditUserBox";
             this.EditUserBox.Size = new System.Drawing.Size(76, 21);
             this.EditUserBox.TabIndex = 0;
+            this.EditUserBox.SelectedIndexChanged += new System.EventHandler(this.EditUserBox_SelectedIndexChanged);
             // 
             // employeeBindingSource
             // 
@@ -132,18 +132,6 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Select Employee";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // SelectUserButton
-            // 
-            this.SelectUserButton.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.employeeBindingSource, "EmployeeID", true));
-            this.SelectUserButton.Location = new System.Drawing.Point(203, 9);
-            this.SelectUserButton.Margin = new System.Windows.Forms.Padding(2);
-            this.SelectUserButton.Name = "SelectUserButton";
-            this.SelectUserButton.Size = new System.Drawing.Size(56, 19);
-            this.SelectUserButton.TabIndex = 1;
-            this.SelectUserButton.Text = "Select";
-            this.SelectUserButton.UseVisualStyleBackColor = true;
-            this.SelectUserButton.Click += new System.EventHandler(this.SelectUserButton_Click);
             // 
             // label5
             // 
@@ -186,7 +174,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.SubmitChangesButton);
             this.Controls.Add(this.SetPasswordBox);
-            this.Controls.Add(this.SelectUserButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.EditUserBox);
             this.Controls.Add(this.label3);
@@ -216,7 +203,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox EditUserBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button SelectUserButton;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button SubmitChangesButton;
         private System.Windows.Forms.TextBox SetPasswordBox;

@@ -52,47 +52,7 @@ namespace ScheduleGenerator
             }
         }
 
-        private void SelectUserButton_Click(object sender, EventArgs e)
-        {
-            currentID = employeeIDs[EditUserBox.SelectedIndex];
-
-            //Instead of having all of these label click methods this info needs to load on selection of employee.
-            SqlConnection con = new SqlConnection(serverInfo);
-            con.Open();
-
-            //Get first name.
-            SqlCommand cmd = new SqlCommand("getFirstName", con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@pID", currentID);
-//            cmd.ExecuteNonQuery();
-            //Store result. I don't know how as you seem to display the knowledge in the login form.
-            SetFirstNameTextBox.Text = cmd.ExecuteScalar().ToString();
-
-            //Get last name.
-            cmd = new SqlCommand("getLastName", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@pID", currentID);
-            //Store result.
-            SetLastNameTextBox.Text = cmd.ExecuteScalar().ToString();
-
-            //Get email.
-            cmd = new SqlCommand("getEmail", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@pID", currentID));
-            //Store result.
-            SetEmailBoxx.Text = cmd.ExecuteScalar().ToString();
-
-            //Get password.
-            cmd = new SqlCommand("getPassword", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@pID", currentID));
-            //Store result.
-            SetPasswordBox.Text = cmd.ExecuteScalar().ToString();
-
-
-            con.Close();
-        }
+        
 
         private void EditUserForm_Load(object sender, EventArgs e)
         {
@@ -105,6 +65,31 @@ namespace ScheduleGenerator
 
         private void SubmitChangesButton_Click(object sender, EventArgs e)
         {
+            if (EditUserBox.SelectedIndex < 0)
+            {
+                MessageBox.Show("Please select an employee first.");
+                return;
+            }
+            if (SetEmailBoxx.TextLength <= 0)
+            {
+                MessageBox.Show("Must have an email entered.");
+                return;
+            }
+            if (SetPasswordBox.TextLength <= 0)
+            {
+                MessageBox.Show("Must have a password entered.");
+                return;
+            }
+            if (SetLastNameTextBox.TextLength <= 0)
+            {
+                MessageBox.Show("Must have a last name entered.");
+                return;
+            }
+            if (SetFirstNameTextBox.TextLength <= 0)
+            {
+                MessageBox.Show("Must have a password entered.");
+                return;
+            }
             //Update users password.
             string newPassword = SetEmailBoxx.Text;
             string newEmail = SetPasswordBox.Text;
@@ -137,6 +122,48 @@ namespace ScheduleGenerator
             cmd.Parameters.Add(new SqlParameter("@pID", currentID));
             cmd.Parameters.Add(new SqlParameter("@pNewFirstName", newFName));
             cmd.ExecuteNonQuery();
+
+            con.Close();
+        }
+
+        private void EditUserBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            currentID = employeeIDs[EditUserBox.SelectedIndex];
+
+            //Instead of having all of these label click methods this info needs to load on selection of employee.
+            SqlConnection con = new SqlConnection(serverInfo);
+            con.Open();
+
+            //Get first name.
+            SqlCommand cmd = new SqlCommand("getFirstName", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@pID", currentID);
+            //            cmd.ExecuteNonQuery();
+            //Store result. I don't know how as you seem to display the knowledge in the login form.
+            SetFirstNameTextBox.Text = cmd.ExecuteScalar().ToString();
+
+            //Get last name.
+            cmd = new SqlCommand("getLastName", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@pID", currentID);
+            //Store result.
+            SetLastNameTextBox.Text = cmd.ExecuteScalar().ToString();
+
+            //Get email.
+            cmd = new SqlCommand("getEmail", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@pID", currentID));
+            //Store result.
+            SetEmailBoxx.Text = cmd.ExecuteScalar().ToString();
+
+            //Get password.
+            cmd = new SqlCommand("getPassword", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@pID", currentID));
+            //Store result.
+            SetPasswordBox.Text = cmd.ExecuteScalar().ToString();
+
 
             con.Close();
         }
